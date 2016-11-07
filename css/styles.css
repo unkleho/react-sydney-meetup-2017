@@ -2,37 +2,9 @@ body {
 	font-family: "Circular-Medium";
 }
 
-.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-	font-family: Circular-Bold;
-	line-height: 1;
-}
-
-.reveal a:link, .reveal a:visited, .reveal a {
+a:link, a:visited {
 	color: #e30066;
-}
-
-ul.small {
-	font-size: 30px;
-}
-
-.reveal .progress span {
-	background-color: #e30066;
-}
-
-.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-	border-right-color: #e30066;
-}
-
-.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-	border-left-color: #e30066;
-}
-
-.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-	border-top-color: #e30066;
-}
-
-.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-	border-bottom-color: #e30066;
+	text-decoration: none;
 }
 
 /* Background */
