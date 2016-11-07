@@ -206,7 +206,7 @@ export default class Presentation extends React.Component {
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Local development environments</Heading>
             <List>
-              <Appear><ListItem>esting production environments locally</ListItem></Appear>
+              <Appear><ListItem>Testing production environments locally</ListItem></Appear>
   						<Appear><ListItem>Avoids the works on mine scenario</ListItem></Appear>
   					</List>
   				</Slide>
@@ -325,7 +325,8 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]} bgColor="white">
             <Heading size={2} textColor="black" textFont="primary">Woocommerce</Heading>
-            <Appear><Text lineHeight={1.5} margin="1em">Free Wordpress Plugin</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Free open source Wordpress Plugin</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Make money from extensions</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Now owned by Automattic, who run Wordpress.com</Text></Appear>
           </Slide>
 
@@ -368,9 +369,9 @@ export default class Presentation extends React.Component {
             <Appear><Text lineHeight={1.5} padding="0.5em" bgColor="black" textColor="primary">Wordpress events = Source of truth</Text></Appear>
             <Appear>
               <Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">
-                <Appear><span>Direct data for SD and SF</span></Appear>
-                <Appear><span>, copy for print booklets via Indesign Exporter</span></Appear>
-                <Appear><span>, feeds into <Link>maas.museum/whats-on</Link></span></Appear>
+                <Appear><Text bgColor="white" padding="0.5em">Direct data for SD and SF</Text></Appear>
+                <Appear><Text bgColor="white" padding="0.5em">Indesign Exporter for print booklet</Text></Appear>
+                <Appear><Text bgColor="white" padding="0.5em">Data for <Link>maas.museum/whats-on</Link></Text></Appear>
               </Text>
             </Appear>
   				</Slide>
