@@ -176,58 +176,57 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Redbot</Heading>
   					<p><a href="https://redbot.org/">https://redbot.org/</a></p>
-  					<ul>
-  						<li class="fragment">Tests server header responses</li>
-  						<li class="fragment">Caching, server settings</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Tests server header responses</ListItem></Appear>
+  						<Appear><ListItem>Caching, server settings</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Qualys SSL Labs</Heading>
   					<p><a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a></p>
-  					<ul>
-  						<li class="fragment">Testing SSL configuration</li>
-  						<li class="fragment">Vulnerabilities to SSL exploits</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Testing SSL configuration</ListItem></Appear>
+  						<Appear><ListItem>Vulnerabilities to SSL exploits</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Pingdom Tools</Heading>
   					<p><a href="http://tools.pingdom.com/fpt/">http://tools.pingdom.com/fpt/</a></p>
-  					<ul>
-  						<li class="fragment">Asset waterfall</li>
-  						<li class="fragment">Testing asset compression</li>
-  						<li class="fragment">Response times</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Asset waterfall</ListItem></Appear>
+  						<Appear><ListItem>Testing asset compression</ListItem></Appear>
+  						<Appear><ListItem>Response times</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Local development environments</Heading>
-  					<ul>
-  						<li class="fragment">Testing production environments locally</li>
-  						<li class="fragment">Avoids the works on mine scenario</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>esting production environments locally</ListItem></Appear>
+  						<Appear><ListItem>Avoids the works on mine scenario</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Vagrant</Heading>
-  					<p></p>
-  					<ul>
-  						<li class="fragment">Consistent development environments</li>
-  						<li class="fragment">Managed via a repo</li>
-  						<li class="fragment">Multiple sites can be run on the same host</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Consistent development environments</ListItem></Appear>
+  						<Appear><ListItem>Managed via a repo</ListItem></Appear>
+  						<Appear><ListItem>Multiple sites can be run on the same host</ListItem></Appear>
+  					</List>
   					<pre class="fragment"><code data-trim>vagrant up</code></pre>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
 
   				    <Heading size={2} textColor="black" textFont="primary">Performance improvements</Heading>
-  					<ul>
-  						<li class="fragment">Apache Bench</li>
-  						<li class="fragment">1000 request / 100 requests concurrency</li>
-  						<li class="fragment">Comparing old, development and new environments</li>
-              </ul>
+            <List>
+              <Appear><ListItem>Apache Bench</ListItem></Appear>
+  						<Appear><ListItem>1000 request / 100 requests concurrency</ListItem></Appear>
+  						<Appear><ListItem>Comparing old, development and new environments</ListItem></Appear>
+              </List>
 
   				</Slide>
 
@@ -247,33 +246,33 @@ export default class Presentation extends React.Component {
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Deployment</Heading>
-  					<ul>
-  						<li class="fragment">Automated</li>
-  						<li class="fragment">Consistent &amp; repeatable</li>
-  						<li class="fragment">Rollback</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Automated</ListItem></Appear>
+  						<Appear><ListItem>Consistent &amp; repeatable</ListItem></Appear>
+  						<Appear><ListItem>Rollback</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Capistrano</Heading>
   					<p><a href="http://capistranorb.com/">http://capistranorb.com/</a></p>
-  					<ul>
-  						<li class="fragment">Easily scriptable</li>
-  						<li class="fragment">Composer package management</li>
-  						<li class="fragment">Cache flushing</li>
-  						<li class="fragment">Deployment notifications</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Easily scriptable</ListItem></Appear>
+  						<Appear><ListItem>Composer package management</ListItem></Appear>
+  						<Appear><ListItem>Cache flushing</ListItem></Appear>
+  						<Appear><ListItem>Deployment notifications</ListItem></Appear>
+  					</List>
   					<pre class="fragment"><code data-trim>cap production deploy</code></pre>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">New Relic</Heading>
   					<p><a href="http://newrelic.com/">http://newrelic.com/</a></p>
-  					<ul>
-  						<li class="fragment">Error reporting on back/front end</li>
-  						<li class="fragment">Real time application monitoring</li>
-  						<li class="fragment">Deployment tracking</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Error reporting on back/front end</ListItem></Appear>
+  						<Appear><ListItem>Real time application monitoring</ListItem></Appear>
+  						<Appear><ListItem>Deployment tracking</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -288,23 +287,23 @@ export default class Presentation extends React.Component {
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Bedrock</Heading>
   					<p class="fragment"><a href="https://roots.io/bedrock/">https://roots.io/bedrock</a></p>
-  					<ul>
-  						<li class="fragment">Modern development tools</li>
-  						<li class="fragment">Easier configuration</li>
-  						<li class="fragment">Improved folder structure</li>
-  					</ul>
+            <List>
+              <Appear><ListItem>Modern development tools</ListItem></Appear>
+  						<Appear><ListItem>Easier configuration</ListItem></Appear>
+  						<Appear><ListItem>Improved folder structure</ListItem></Appear>
+  					</List>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Slide transition={["slide"]} bgColor="white">
   						<h3>Composer</h3>
   						<p class="fragment"><a href="https://getcomposer.org/">https://getcomposer.org</a></p>
-  						<ul>
-  							<li class="fragment">PHP Dependency Management</li>
-  							<li class="fragment">Ensures team is using the same version</li>
-  							<li class="fragment">Easy to rollback Wordpress or plugin update</li>
-  							<li class="fragment">Required for deployments</li>
-  						</ul>
+              <List>
+  							<Appear><ListItem>PHP Dependency Management</ListItem></Appear>
+  							<Appear><ListItem>Ensures team is using the same version</ListItem></Appear>
+  							<Appear><ListItem>Easy to rollback Wordpress or plugin update</ListItem></Appear>
+  							<Appear><ListItem>Required for deployments</ListItem></Appear>
+  						</List>
   					</Slide>
 
   					<Slide transition={["slide"]} bgColor="white">
