@@ -281,7 +281,7 @@ export default class Presentation extends React.Component {
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
-  					<h3><span class="fragment">Bedrock</span> Wordpress <span class="fragment">Boilerplate</span></h3>
+  					<Heading size={2} textColor="black" textFont="primary"><span class="fragment">Bedrock</span> Wordpress <span class="fragment">Boilerplate</span></Heading>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -296,7 +296,7 @@ export default class Presentation extends React.Component {
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Slide transition={["slide"]} bgColor="white">
-  						<h3>Composer</h3>
+  						<Heading size={2} textColor="black" textFont="primary">Composer</Heading>
   						<p class="fragment"><a href="https://getcomposer.org/">https://getcomposer.org</a></p>
               <List>
   							<Appear><ListItem>PHP Dependency Management</ListItem></Appear>
@@ -330,30 +330,35 @@ export default class Presentation extends React.Component {
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
-  					<h3>Dotenv</h3>
+  					<Heading size={2} textColor="black" textFont="primary">Dotenv</Heading>
   					<p class="fragment"><a href="https://github.com/bkeepers/dotenv">https://github.com/bkeepers/dotenv</a></p>
   					<p class="fragment">Stores configuration in the environment</p>
   				</Slide>
 
+          {/*
+            Kaho Starts Here:
+          */}
+
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading size={2} textColor="black" textFont="primary">Typical Wordpress Folder Structure</Heading>
+                <ul>
+                  <li class="fragment">wp-admin/</li>
+                  <li class="fragment">wp-config.php</li>
+                  <li class="fragment">wp-content/
+                    <ul>
+                      <li class="fragment">languages/</li>
+                      <li class="fragment">plugins/</li>
+                      <li class="fragment">themes/</li>
+                      <li class="fragment">uploads/</li>
+                    </ul>
+                  </li>
+                  <li class="fragment">wp-includes/</li>
+                </ul>
+          </Slide>
+
   				<Slide transition={["slide"]} bgColor="white">
   					<Slide transition={["slide"]} bgColor="white">
-  						<h3>Typical Wordpress Folder Structure</h3>
-  								<ul>
-  									<li class="fragment">wp-admin/</li>
-  									<li class="fragment">wp-config.php</li>
-  									<li class="fragment">wp-content/
-  										<ul>
-  											<li class="fragment">languages/</li>
-  											<li class="fragment">plugins/</li>
-  											<li class="fragment">themes/</li>
-  											<li class="fragment">uploads/</li>
-  										</ul>
-  									</li>
-  									<li class="fragment">wp-includes/</li>
-  								</ul>
-  					</Slide>
-  					<Slide transition={["slide"]} bgColor="white">
-  						<h3>Bedrock Folder Structure</h3>
+  						<Heading size={2} textColor="black" textFont="primary">Bedrock Folder Structure</Heading>
   									<ul class="small">
   										<li class="fragment">config/</li>
   										<li class="fragment">scripts/</li>
@@ -396,7 +401,7 @@ export default class Presentation extends React.Component {
   						<p class="fragment"><a href="https://roots.io/sage/">https://roots.io/sage/</a></p>
   					</Slide>
   					<Slide transition={["slide"]} bgColor="white">
-  						<h3>MAAS websites that use Sage</h3>
+  						<Heading size={2} textColor="black" textFont="primary">MAAS websites that use Sage</Heading>
   						<ul>
   							<li class="fragment">maas.museum</li>
   							<li class="fragment">sydneydesign.com.au</li>
