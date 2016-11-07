@@ -114,9 +114,9 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Research</Heading>
-  					<p>What did we want to achieve?</p>
+  				<Slide transition={["slide"]} bgColor="black">
+  					<Heading size={2} textColor="white" textFont="primary">Research</Heading>
+  					<Text textColor="white" lineHeight={1.5}>What did we want to achieve?</Text>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -172,7 +172,7 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Build/test/teardown of infrastructure</ListItem></Appear>
   						<Appear><ListItem>Continuous integration</ListItem></Appear>
   					</List>
-  					<pre class="fragment"><code data-trim>kitchen test default-debian-77</code></pre>
+  					<Appear><CodePane textSize="1em">kitchen test default-debian-77</CodePane></Appear>
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="white">
@@ -218,7 +218,7 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Managed via a repo</ListItem></Appear>
   						<Appear><ListItem>Multiple sites can be run on the same host</ListItem></Appear>
   					</List>
-  					<pre class="fragment"><code data-trim>vagrant up</code></pre>
+  					<Appear><CodePane textSize="1em">vagrant up</CodePane></Appear>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -307,23 +307,10 @@ export default class Presentation extends React.Component {
 
 					<Slide transition={["slide"]} bgColor="white">
 						<p>composer.json</p>
-						{/*<pre><code data-trim contenteditable>{
-  "name": "MAAS Website",
-  "type": "project",
-  "description": "Museum of Applied Arts and Sciences",
-  "homepage": "http://maas.museum",
-  "require": {
-    "php": ">=5.3.2",
-    "wordpress/wordpress": "4.2.2",
-    "fancyguy/webroot-installer": "1.1.0",
-    "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist-plugin/advanced-custom-fields": "4.4.2",
-    "wpackagist-plugin/types": "1.7.7",
-    "wpackagist-plugin/better-wp-security": "4.8"
-  }
-}</code></pre>*/}
-						<pre class="fragment"><code>composer update</code></pre>
+            <CodePane lang="jsx"
+              source={require("raw!../assets/deck.example")}
+              margin="20px auto" />
+            <Appear><CodePane textSize="1em">composer update</CodePane></Appear>
 					</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
