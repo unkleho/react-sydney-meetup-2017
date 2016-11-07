@@ -264,7 +264,7 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Cache flushing</ListItem></Appear>
   						<Appear><ListItem>Deployment notifications</ListItem></Appear>
   					</List>
-  					<pre class="fragment"><code data-trim>cap production deploy</code></pre>
+  					<Appear><CodePane textSize="1em">cap production deploy</CodePane></Appear>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
