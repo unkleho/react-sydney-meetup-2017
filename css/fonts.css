@@ -1,0 +1,101 @@
+/*
+ * Legal Disclaimer
+ *
+ * These Fonts are licensed only for use on these domains and their subdomains:
+ * maas.museum
+ *
+ * It is illegal to download or use them on other websites.
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2014
+ */
+
+@font-face {
+    font-family: "Circular-MediumItalic";
+    src:url("../fonts/lineto-circular-pro-mediumItalic.eot");
+    src:url("../fonts/lineto-circular-pro-mediumItalic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-mediumItalic.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-mediumItalic.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-mediumItalic.svg#lineto-circular-pro-mediumItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-Bold";
+    src:url("../fonts/lineto-circular-pro-bold.eot");
+    src:url("../fonts/lineto-circular-pro-bold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-bold.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-bold.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-bold.svg#lineto-circular-pro-bold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-Black";
+    src:url("../fonts/lineto-circular-pro-black.eot");
+    src:url("../fonts/lineto-circular-pro-black.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-black.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-black.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-black.svg#lineto-circular-pro-black") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-BoldItalic";
+    src:url("../fonts/lineto-circular-pro-boldItalic.eot");
+    src:url("../fonts/lineto-circular-pro-boldItalic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-boldItalic.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-boldItalic.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-boldItalic.svg#lineto-circular-pro-boldItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-Book";
+    src:url("../fonts/lineto-circular-pro-book.eot");
+    src:url("../fonts/lineto-circular-pro-book.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-book.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-book.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-book.svg#lineto-circular-pro-book") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-Medium";
+    src:url("../fonts/lineto-circular-pro-medium.eot");
+    src:url("../fonts/lineto-circular-pro-medium.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-medium.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-medium.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-medium.svg#lineto-circular-pro-medium") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-BlackItalic";
+    src:url("../fonts/lineto-circular-pro-blackItalic.eot");
+    src:url("../fonts/lineto-circular-pro-blackItalic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-blackItalic.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-blackItalic.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-blackItalic.svg#lineto-circular-pro-blackItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Circular-BookItalic";
+    src:url("../fonts/lineto-circular-pro-bookItalic.eot");
+    src:url("../fonts/lineto-circular-pro-bookItalic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/lineto-circular-pro-bookItalic.woff") format("woff"),
+        url("../fonts/lineto-circular-pro-bookItalic.ttf") format("truetype"),
+        url("../fonts/lineto-circular-pro-bookItalic.svg#lineto-circular-pro-bookItalic") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

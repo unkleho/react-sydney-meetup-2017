@@ -34,7 +34,8 @@ import Interactive from "../assets/interactive";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-
+require("../css/fonts.css");
+require("../css/styles.css");
 
 const images = {
   city: require("../assets/city.jpg"),
@@ -46,7 +47,9 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#ff4081"
+  primary: "#e30066"
+}, {
+  primary: "Circular-Medium"
 });
 
 export default class Presentation extends React.Component {
