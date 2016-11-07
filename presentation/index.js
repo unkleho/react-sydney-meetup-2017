@@ -67,25 +67,25 @@ export default class Presentation extends React.Component {
   					</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Available at:</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Available at:</Heading>
   					<p><a>ma.as/mwa2015</a></p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
 						<Heading size={1} fit lineHeight={1} textColor="black">The Full Stack</Heading>
-						<h3 class="fragment">Infrastructure</h3>
-						<h3 class="fragment">Backend</h3>
-						<h3 class="fragment">Frontend</h3>
+						<Appear><Text>Infrastructure</Text></Appear>
+						<Appear><Text>Backend</Text></Appear>
+						<Appear><Text>Frontend</Text></Appear>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={1} fit lineHeight={1} textColor="black">Infrastructure</Heading>
   					<p class="fragment">The often overlooked but vital part of your app</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-            <Heading size={2} fit textColor="white" textFont="primary">Traditional approach</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+            <Heading size={2} textColor="black" textFont="primary">Traditional approach</Heading>
   					<List>
   						<Appear><ListItem>Pre-configured VPS</ListItem></Appear>
   						<Appear><ListItem>Provided by the IT department</ListItem></Appear>
@@ -94,8 +94,8 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Benefits</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Benefits</Heading>
   					<List>
   						<Appear><ListItem>Easy to manage</ListItem></Appear>
   						<Appear><ListItem>Community support</ListItem></Appear>
@@ -103,8 +103,8 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Disadvantages</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Disadvantages</Heading>
   					<List>
   						<Appear><ListItem>Fails under high load</ListItem></Appear>
   						<Appear><ListItem>Resource intensive</ListItem></Appear>
@@ -112,13 +112,13 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Research</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Research</Heading>
   					<p>What did we want to achieve?</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Performance</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Performance</Heading>
   					<List>
   						<Appear><ListItem>Handle high loads</ListItem></Appear>
   						<Appear><ListItem>Faster response times</ListItem></Appear>
@@ -126,16 +126,16 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Stability</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Stability</Heading>
   					<List>
   						<Appear><ListItem>Better uptime</ListItem></Appear>
   						<Appear><ListItem>Fault tolerant</ListItem></Appear>
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Security</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Security</Heading>
   					<List>
   						<Appear><ListItem>Ensure applications are easy to update</ListItem></Appear>
   						<Appear><ListItem>&ldquo;HTTPS Everywhere&rdquo;</ListItem></Appear>
@@ -143,8 +143,8 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Infrastructure as code</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Infrastructure as code</Heading>
   					<List>
   						<Appear><ListItem>Infrastructure code is stored in a repo</ListItem></Appear>
   						<Appear><ListItem>Easier to maintain upgrade</ListItem></Appear>
@@ -153,8 +153,8 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Chef</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Chef</Heading>
   					<p><a href="https://www.chef.io/">https://www.chef.io/</a></p>
   					<List>
   						<Appear><ListItem>Ruby based</ListItem></Appear>
@@ -163,8 +163,8 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Kitchen CI</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Kitchen CI</Heading>
   					<p><a href="https://kitchen.io">https://kitchen.io</a></p>
   					<List>
   						<Appear><ListItem>Build/test/teardown of infrastructure</ListItem></Appear>
@@ -173,8 +173,8 @@ export default class Presentation extends React.Component {
   					<pre class="fragment"><code data-trim>kitchen test default-debian-77</code></pre>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Redbot</Heading>
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Redbot</Heading>
   					<p><a href="https://redbot.org/">https://redbot.org/</a></p>
   					<ul>
   						<li class="fragment">Tests server header responses</li>
@@ -182,8 +182,8 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Qualys SSL Labs</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Qualys SSL Labs</Heading>
   					<p><a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a></p>
   					<ul>
   						<li class="fragment">Testing SSL configuration</li>
@@ -191,8 +191,8 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Pingdom Tools</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Pingdom Tools</Heading>
   					<p><a href="http://tools.pingdom.com/fpt/">http://tools.pingdom.com/fpt/</a></p>
   					<ul>
   						<li class="fragment">Asset waterfall</li>
@@ -201,16 +201,16 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Local development environments</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Local development environments</Heading>
   					<ul>
   						<li class="fragment">Testing production environments locally</li>
   						<li class="fragment">Avoids the works on mine scenario</li>
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Vagrant</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Vagrant</Heading>
   					<p></p>
   					<ul>
   						<li class="fragment">Consistent development environments</li>
@@ -220,9 +220,9 @@ export default class Presentation extends React.Component {
   					<pre class="fragment"><code data-trim>vagrant up</code></pre>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
 
-  				    <Heading size={2} fit textColor="white" textFont="primary">Performance improvements</Heading>
+  				    <Heading size={2} textColor="black" textFont="primary">Performance improvements</Heading>
   					<ul>
   						<li class="fragment">Apache Bench</li>
   						<li class="fragment">1000 request / 100 requests concurrency</li>
@@ -231,22 +231,22 @@ export default class Presentation extends React.Component {
 
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
 
-  				    <Heading size={2} fit textColor="white" textFont="primary">Total time to complete 1000 requests</Heading>
+  				    <Heading size={2} textColor="black" textFont="primary">Total time to complete 1000 requests</Heading>
   				    <div id="bar-chart" class="fragment"></div>
 
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
 
-  				    <Heading size={2} fit textColor="white" textFont="primary">Requests per second</Heading>
+  				    <Heading size={2} textColor="black" textFont="primary">Requests per second</Heading>
   				    <div id="bar-chart2" class="fragment"></div>
 
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Deployment</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Deployment</Heading>
   					<ul>
   						<li class="fragment">Automated</li>
   						<li class="fragment">Consistent &amp; repeatable</li>
@@ -254,8 +254,8 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Capistrano</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Capistrano</Heading>
   					<p><a href="http://capistranorb.com/">http://capistranorb.com/</a></p>
   					<ul>
   						<li class="fragment">Easily scriptable</li>
@@ -266,8 +266,8 @@ export default class Presentation extends React.Component {
   					<pre class="fragment"><code data-trim>cap production deploy</code></pre>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">New Relic</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">New Relic</Heading>
   					<p><a href="http://newrelic.com/">http://newrelic.com/</a></p>
   					<ul>
   						<li class="fragment">Error reporting on back/front end</li>
@@ -276,17 +276,17 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={1} fit lineHeight={1} textColor="black">Backend</Heading>
   					<p>12 Factor App (almost)</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
   					<h3><span class="fragment">Bedrock</span> Wordpress <span class="fragment">Boilerplate</span></h3>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} fit textColor="white" textFont="primary">Bedrock</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="black" textFont="primary">Bedrock</Heading>
   					<p class="fragment"><a href="https://roots.io/bedrock/">https://roots.io/bedrock</a></p>
   					<ul>
   						<li class="fragment">Modern development tools</li>
@@ -295,8 +295,8 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Slide transition={["slide"]} bgColor="white">
   						<h3>Composer</h3>
   						<p class="fragment"><a href="https://getcomposer.org/">https://getcomposer.org</a></p>
   						<ul>
@@ -307,7 +307,7 @@ export default class Presentation extends React.Component {
   						</ul>
   					</Slide>
 
-  					<Slide transition={["slide"]} bgColor="primary">
+  					<Slide transition={["slide"]} bgColor="white">
   						<p>composer.json</p>
   						{/*<pre><code data-trim contenteditable>{
     "name": "MAAS Website",
@@ -330,14 +330,14 @@ export default class Presentation extends React.Component {
 
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
   					<h3>Dotenv</h3>
   					<p class="fragment"><a href="https://github.com/bkeepers/dotenv">https://github.com/bkeepers/dotenv</a></p>
   					<p class="fragment">Stores configuration in the environment</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Slide transition={["slide"]} bgColor="white">
   						<h3>Typical Wordpress Folder Structure</h3>
   								<ul>
   									<li class="fragment">wp-admin/</li>
@@ -353,7 +353,7 @@ export default class Presentation extends React.Component {
   									<li class="fragment">wp-includes/</li>
   								</ul>
   					</Slide>
-  					<Slide transition={["slide"]} bgColor="primary">
+  					<Slide transition={["slide"]} bgColor="white">
   						<h3>Bedrock Folder Structure</h3>
   									<ul class="small">
   										<li class="fragment">config/</li>
@@ -385,18 +385,18 @@ export default class Presentation extends React.Component {
   					</Slide>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
+  				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={1} fit lineHeight={1} textColor="black">Frontend</Heading>
   					<p>Keeping up with the Joneses</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="primary">
-  					<Slide transition={["slide"]} bgColor="primary">
-  						<Heading size={2} fit textColor="white" textFont="primary">Sage</Heading>
+  				<Slide transition={["slide"]} bgColor="white">
+  					<Slide transition={["slide"]} bgColor="white">
+  						<Heading size={2} textColor="black" textFont="primary">Sage</Heading>
   						<p>Barebones Wordpress starter theme with modern frontend development workflow</p>
   						<p class="fragment"><a href="https://roots.io/sage/">https://roots.io/sage/</a></p>
   					</Slide>
-  					<Slide transition={["slide"]} bgColor="primary">
+  					<Slide transition={["slide"]} bgColor="white">
   						<h3>MAAS websites that use Sage</h3>
   						<ul>
   							<li class="fragment">maas.museum</li>
@@ -426,7 +426,7 @@ export default class Presentation extends React.Component {
 
 
 
-          <Slide transition={["slide"]} bgColor="primary">
+          <Slide transition={["slide"]} bgColor="white">
             <Heading size={1} fit caps lineHeight={1} textColor="black">
               A Modern Museum Web Stack
             </Heading>
@@ -526,7 +526,7 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
               <Appear><ListItem>And...</ListItem></Appear>
             </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
+          <Slide transition={["slide"]} bgColor="white">
             <Heading size={1} caps fit textColor="tertiary">
               Your presentations are interactive
             </Heading>
