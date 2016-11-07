@@ -38,10 +38,12 @@ require("../css/fonts.css");
 require("../css/styles.css");
 
 const images = {
-  city: require("../assets/city.jpg"),
-  kat: require("../assets/kat.png"),
-  logo: require("../assets/formidable-logo.svg"),
-  markdown: require("../assets/markdown.png")
+  memberships: require("../assets/memberships.png"),
+  books: require("../assets/books.png"),
+  electronics: require("../assets/electronics.png"),
+  donation: require("../assets/donation.png"),
+  report: require("../assets/woo-report.png"),
+  star: require("../assets/name-a-star.png")
 };
 
 preloader(images);
@@ -60,23 +62,18 @@ export default class Presentation extends React.Component {
 
           <Slide bgColor="primary">
   					<Heading size={1} lineHeight={1} textColor="black">A Modern Museum Web Stack</Heading>
-  					<p><small>Museum of Applied Arts and Sciences</small></p>
+  					<Heading size={2} textColor="white">Museum of Applied Arts and Sciences</Heading>
   					<p>
   						Rowan Stenhouse <a>@shroganjo</a><br/>
   						Kaho Cheung <a>@unkleho</a>
   					</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Available at:</Heading>
-  					<p><a>ma.as/mwa2015</a></p>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-						<Heading size={1} fit lineHeight={1} textColor="black">The Full Stack</Heading>
-						<Appear><Text>Infrastructure</Text></Appear>
-						<Appear><Text>Backend</Text></Appear>
-						<Appear><Text>Frontend</Text></Appear>
+  				<Slide transition={["slide"]} bgColor="black">
+						<Heading size={1} fit lineHeight={1} textColor="primary">The Full Stack</Heading>
+						<Appear><Heading textColor="white">Infrastructure</Heading></Appear>
+						<Appear><Heading textColor="white">Backend</Heading></Appear>
+						<Appear><Heading textColor="white">Frontend</Heading></Appear>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -282,7 +279,7 @@ export default class Presentation extends React.Component {
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary"><span class="fragment">Bedrock</span> Wordpress <span class="fragment">Boilerplate</span></Heading>
+  					<Heading size={2} textColor="black" textFont="primary"><Appear><span>Bedrock</span></Appear> Wordpress <Appear><span>Boilerplate</span></Appear></Heading>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -295,40 +292,37 @@ export default class Presentation extends React.Component {
   					</ul>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Slide transition={["slide"]} bgColor="white">
-  						<Heading size={2} textColor="black" textFont="primary">Composer</Heading>
-  						<p class="fragment"><a href="https://getcomposer.org/">https://getcomposer.org</a></p>
-  						<ul>
-  							<li class="fragment">PHP Dependency Management</li>
-  							<li class="fragment">Ensures team is using the same version</li>
-  							<li class="fragment">Easy to rollback Wordpress or plugin update</li>
-  							<li class="fragment">Required for deployments</li>
-  						</ul>
-  					</Slide>
+					<Slide transition={["slide"]} bgColor="white">
+						<Heading size={2} textColor="black" textFont="primary">Composer</Heading>
+						<p class="fragment"><a href="https://getcomposer.org/">https://getcomposer.org</a></p>
+						<ul>
+							<li class="fragment">PHP Dependency Management</li>
+							<li class="fragment">Ensures team is using the same version</li>
+							<li class="fragment">Easy to rollback Wordpress or plugin update</li>
+							<li class="fragment">Required for deployments</li>
+						</ul>
+					</Slide>
 
-  					<Slide transition={["slide"]} bgColor="white">
-  						<p>composer.json</p>
-  						{/*<pre><code data-trim contenteditable>{
-    "name": "MAAS Website",
-    "type": "project",
-    "description": "Museum of Applied Arts and Sciences",
-    "homepage": "http://maas.museum",
-    "require": {
-      "php": ">=5.3.2",
-      "wordpress/wordpress": "4.2.2",
-      "fancyguy/webroot-installer": "1.1.0",
-      "composer/installers": "v1.0.12",
-      "vlucas/phpdotenv": "~1.0.6",
-      "wpackagist-plugin/advanced-custom-fields": "4.4.2",
-      "wpackagist-plugin/types": "1.7.7",
-      "wpackagist-plugin/better-wp-security": "4.8"
-    }
-  }</code></pre>*/}
-  						<pre class="fragment"><code>composer update</code></pre>
-  					</Slide>
-
-  				</Slide>
+					<Slide transition={["slide"]} bgColor="white">
+						<p>composer.json</p>
+						{/*<pre><code data-trim contenteditable>{
+  "name": "MAAS Website",
+  "type": "project",
+  "description": "Museum of Applied Arts and Sciences",
+  "homepage": "http://maas.museum",
+  "require": {
+    "php": ">=5.3.2",
+    "wordpress/wordpress": "4.2.2",
+    "fancyguy/webroot-installer": "1.1.0",
+    "composer/installers": "v1.0.12",
+    "vlucas/phpdotenv": "~1.0.6",
+    "wpackagist-plugin/advanced-custom-fields": "4.4.2",
+    "wpackagist-plugin/types": "1.7.7",
+    "wpackagist-plugin/better-wp-security": "4.8"
+  }
+}</code></pre>*/}
+						<pre class="fragment"><code>composer update</code></pre>
+					</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Dotenv</Heading>
@@ -341,20 +335,35 @@ export default class Presentation extends React.Component {
           */}
 
           <Slide transition={["slide"]} bgColor="white">
-            <Heading size={2} textColor="black" textFont="primary">Typical Wordpress Folder Structure</Heading>
-                <ul>
-                  <li class="fragment">wp-admin/</li>
-                  <li class="fragment">wp-config.php</li>
-                  <li class="fragment">wp-content/
-                    <ul>
-                      <li class="fragment">languages/</li>
-                      <li class="fragment">plugins/</li>
-                      <li class="fragment">themes/</li>
-                      <li class="fragment">uploads/</li>
-                    </ul>
-                  </li>
-                  <li class="fragment">wp-includes/</li>
-                </ul>
+            <Heading size={2} textColor="black" textFont="primary">Woocommerce</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">Free Wordpress Plugin</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Now owned by Automattic, who run Wordpress.com</Text></Appear>
+            <Text lineHeight={1.5} lineHeight={2}>
+            </Text>
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.memberships.replace("/", "")} height="700px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.books.replace("/", "")} height="700px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.electronics.replace("/", "")} height="700px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.donation.replace("/", "")} height="700px" />
+          </Slide>
+
+          <Slide transition={["zoom"]} notes="Big up lachlan!">
+            <Image src={images.star.replace("/", "")} height="700px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.report.replace("/", "")} height="700px" />
           </Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -442,13 +451,13 @@ export default class Presentation extends React.Component {
               Where You Can Write Your Decks In JSX
             </Heading>
             <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text bold caps textColor="tertiary">View on Github</Text>
+              <Text lineHeight={1.5} bold caps textColor="tertiary">View on Github</Text>
             </Link>
-            <Text textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+            <Text lineHeight={1.5} textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            <Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>
+            {/*<Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>*/}
             <Heading size={2} caps fit textColor="primary" textFont="primary">
               Wait what?
             </Heading>
@@ -460,7 +469,7 @@ export default class Presentation extends React.Component {
               margin="20px auto"
             />
           </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
+          <Slide transition={["slide"]} bgImage={images.donation.replace("/", "")} bgDarken={0.75}>
             <Appear fid="1">
               <Heading size={1} caps fit textColor="primary">
                 Full Width
@@ -504,9 +513,8 @@ export default class Presentation extends React.Component {
             </Heading>
             <Markdown>
               {`
-![Markdown Logo](${images.markdown.replace("/", "")})
 
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
+You can write inline images, [Markdown Links](http://commonmark.org), paragraph Text lineHeight={1.5} and most other markdown syntax
 * Lists too!
 * With ~~strikethrough~~ and _italic_
 * And lets not forget **bold**
@@ -541,7 +549,6 @@ You can write inline images, [Markdown Links](http://commonmark.org), paragraph 
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
               Made with love in Seattle by
             </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
           </Slide>
         </Deck>
       </Spectacle>
