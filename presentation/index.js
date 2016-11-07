@@ -367,14 +367,12 @@ export default class Presentation extends React.Component {
             <Appear><Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">Applicants submit in Wordpress</Text></Appear>
             <Appear><Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">Editorial edit copy in Wordpress</Text></Appear>
             <Appear><Text lineHeight={1.5} padding="0.5em" bgColor="black" textColor="primary">Wordpress events = Source of truth</Text></Appear>
-            <Appear>
               <Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">
                 <Appear><Text bgColor="white" padding="0.5em">Direct data for SD and SF</Text></Appear>
                 <Appear><Text bgColor="white" padding="0.5em">Indesign Exporter for print booklet</Text></Appear>
                 <Appear><Text bgColor="white" padding="0.5em">Data for <Link>maas.museum/whats-on</Link></Text></Appear>
               </Text>
-            </Appear>
-  				</Slide>
+        	</Slide>
 
   				<Slide transition={["slide"]} bgColor="black">
   					<Heading size={1} fit lineHeight={1} textColor="primary">Frontend</Heading>
@@ -411,22 +409,23 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom"]} notes="Open up in browser">
-            <Image src={images.digitalLabels.replace("/", "")} height="700px" />
+            <Image src={images.digitalLabels.replace("/", "")} height="700px" margin="-50px 0 0 -170px" />
           </Slide>
 
-          <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!">
+          <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!" notes="We could do a whole talk on this">
             <Heading size={2} lineHeight={1.3} textColor="black" textFont="primary">Digital Labels</Heading>
             <Appear><Text lineHeight={1.5} margin="1em">Single Page App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">And Server Side App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Best of both worlds</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Data from EMu and new database</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Tech research for new Collection website</Text></Appear>
           </Slide>
 
           <Slide transition={["zoom", "spin"]} bgColor="black">
             <Heading size={2} lineHeight={1.3} textColor="primary" textFont="primary">Stacks On</Heading>
-            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Infrastructure</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Backend</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Frontend...</Text></Appear>
+            <Appear><Heading textColor="white">Infrastructure</Heading></Appear>
+						<Appear><Heading textColor="white">Backend</Heading></Appear>
+						<Appear><Heading textColor="white">Frontend...</Heading></Appear>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black">
