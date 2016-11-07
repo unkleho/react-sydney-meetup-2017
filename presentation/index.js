@@ -43,7 +43,10 @@ const images = {
   electronics: require("../assets/electronics.png"),
   donation: require("../assets/donation.png"),
   report: require("../assets/woo-report.png"),
-  star: require("../assets/name-a-star.png")
+  star: require("../assets/name-a-star.png"),
+  whatson: require("../assets/whatson.png"),
+  sdWhatson: require("../assets/sd-whatson.png"),
+  sfWhatson: require("../assets/sf-whatson.png"),
 };
 
 preloader(images);
@@ -337,8 +340,6 @@ export default class Presentation extends React.Component {
             <Heading size={2} textColor="black" textFont="primary">Woocommerce</Heading>
             <Appear><Text lineHeight={1.5} margin="1em">Free Wordpress Plugin</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Now owned by Automattic, who run Wordpress.com</Text></Appear>
-            <Text lineHeight={1.5} lineHeight={2}>
-            </Text>
           </Slide>
 
           <Slide transition={["zoom"]}>
@@ -366,189 +367,57 @@ export default class Presentation extends React.Component {
           </Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
-  					<Slide transition={["slide"]} bgColor="white">
-  						<Heading size={2} textColor="black" textFont="primary">Bedrock Folder Structure</Heading>
-  									<ul class="small">
-  										<li class="fragment">config/</li>
-  										<li class="fragment">scripts/</li>
-  										<li class="fragment">web/
-  											<ul class="fragment">
-  												<li class="fragment">wp/
-  													<ul>
-  													<li class="c0 c1">wp-admin/</li>
-  													<li>wp-content/
-  														<ul>
-  														<li class="c0 c1">languages/</li>
-  														</ul>
-  													</li>
-  													<li class="c0 c1">wp-includes/</li>
-  													</ul>
-  												</li>
-  												<li class="fragment">app/
-  													<ul>
-  													<li class="fragment highlight-red">plugins/</li>
-  													<li class="fragment highlight-red">themes/</li>
-  													<li class="fragment highlight-red">uploads/</li>
-  													</ul>
-  												</li>
-  											</ul>
-  										</li>
-  										<li class="fragment">.env</li>
-  									</ul>
-  					</Slide>
+            <Heading size={1} fit lineHeight={1} textColor="black">MAAS Wordpress Plugins</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">Salesforce Integration</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Indesign Exporter</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Festival Event Submission Platform</Text></Appear>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={1} fit lineHeight={1} textColor="black">Frontend</Heading>
-  					<p>Keeping up with the Joneses</p>
+  				<Slide transition={["slide"]} bgColor="black">
+  					<Heading size={1} fit lineHeight={1} textColor="primary">Frontend</Heading>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Slide transition={["slide"]} bgColor="white">
-  						<Heading size={2} textColor="black" textFont="primary">Sage</Heading>
-  						<p>Barebones Wordpress starter theme with modern frontend development workflow</p>
-  						<p class="fragment"><a href="https://roots.io/sage/">https://roots.io/sage/</a></p>
-  					</Slide>
-  					<Slide transition={["slide"]} bgColor="white">
-  						<Heading size={2} textColor="black" textFont="primary">MAAS websites that use Sage</Heading>
-  						<ul>
-  							<li class="fragment">maas.museum</li>
-  							<li class="fragment">sydneydesign.com.au</li>
-  							<li class="fragment">sydneyscience.com.au</li>
-  						</ul>
-  					</Slide>
-  				</Slide>
+					<Slide transition={["slide"]} bgColor="white">
+						<Heading size={2} textColor="black" textFont="primary">What is frontend?</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">CSS</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Javascript</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Design</Text></Appear>
+					</Slide>
 
+					<Slide transition={["slide"]} bgColor="white" notes="Combined from CSS, JS and Design. No page refresh.">
+						<Heading size={2} lineHeight={1.3} textColor="black" textFont="primary">Single Page Application</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">eg. Gmail, Facebook.</Text></Appear>
+					</Slide>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <Slide transition={["slide"]} bgColor="white">
-            <Heading size={1} fit caps lineHeight={1} textColor="black">
-              A Modern Museum Web Stack
-            </Heading>
-            <Heading size={1} fit caps>
-              A ReactJS Presentation Library
-            </Heading>
-            <Heading size={1} fit caps textColor="black">
-              Where You Can Write Your Decks In JSX
-            </Heading>
-            <Link href="https://github.com/FormidableLabs/spectacle">
-              <Text lineHeight={1.5} bold caps textColor="tertiary">View on Github</Text>
-            </Link>
-            <Text lineHeight={1.5} textSize="1.5em" margin="20px 0px 0px" bold>Hit Your Right Arrow To Begin!</Text>
+          <Slide transition={["zoom"]}>
+            <Image src={images.whatson.replace("/", "")} height="700px" />
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes="You can even put notes on your slide. How awesome is that?">
-            {/*<Image src={images.kat.replace("/", "")} margin="0px auto 40px" height="293px"/>*/}
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              Wait what?
-            </Heading>
+          <Slide transition={["zoom"]}>
+            <Image src={images.sfWhatson.replace("/", "")} height="700px" />
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="<List><li>talk about that</ListItem></Appear><li>and that</ListItem></Appear></List>">
-            <CodePane
-              lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto"
-            />
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.sdWhatson.replace("/", "")} height="700px" />
           </Slide>
-          <Slide transition={["slide"]} bgImage={images.donation.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
-            </Appear>
+
+          <Slide transition={["zoom"]} bgColor="white">
+            <Heading size={2} lineHeight={1.3} textColor="black" textFont="primary">Sharing is caring</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">AngularJS</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">What's On App code shared among the three websites</Text></Appear>
           </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
+
+          <Slide transition={["zoom", "spin"]} bgColor="black">
+            <Heading size={2} lineHeight={1.3} textColor="primary" textFont="primary">Stacks On</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Infrastructure</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Backend</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Frontend...</Text></Appear>
           </Slide>
+
           <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
+            <Heading size={2} lineHeight={1.3} textColor="primary" textFont="primary">The End</Heading>
           </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
 
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph Text lineHeight={1.5} and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="white">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
-            </Heading>
-          </Slide>
         </Deck>
       </Spectacle>
     );
