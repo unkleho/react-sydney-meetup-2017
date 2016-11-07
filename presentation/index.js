@@ -402,6 +402,7 @@ export default class Presentation extends React.Component {
 					<Slide transition={["slide"]} bgColor="white" notes="Combined from CSS, JS and Design. No page refresh.">
 						<Heading size={2} lineHeight={1.3} textColor="black" textFont="primary">Single Page Application</Heading>
             <Appear><Text lineHeight={1.5} margin="1em">eg. Gmail, Facebook.</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Longer initial loading time, but faster afterwards.</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">What's On pages on MAAS, SD and SF</Text></Appear>
 					</Slide>
 
