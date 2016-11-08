@@ -38,6 +38,11 @@ require("../css/fonts.css");
 require("../css/styles.css");
 
 const images = {
+  iLoveLamp: require("../assets/i-love-lamp.gif"),
+  requestsPerSecond: require("../assets/requests-per-second.png"),
+  timePerRequest: require("../assets/time-per-request.png"),
+  dailySessions: require("../assets/daily-sessions-graph.png"),
+  highPerformance: require("../assets/high-performance.jpg"),
   memberships: require("../assets/memberships.png"),
   books: require("../assets/books.png"),
   electronics: require("../assets/electronics.png"),
@@ -95,6 +100,10 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Name the box</ListItem></Appear>
   					</List>
   				</Slide>
+
+          <Slide transition={["zoom"]} bgColor="white">
+           <Image src={images.iLoveLamp.replace("/", "")} height="480px" />
+          </Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Benefits</Heading>
@@ -172,8 +181,17 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Build/test/teardown of infrastructure</ListItem></Appear>
   						<Appear><ListItem>Continuous integration</ListItem></Appear>
   					</List>
-  					<pre class="fragment"><code data-trim>kitchen test default-debian-77</code></pre>
+  					<Appear><CodePane textSize="1em" lang="bash">kitchen test maas-production</CodePane></Appear>
   				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading size={2} textColor="black" textFont="primary">So what&rsquo;s the point?</Heading>
+            <List>
+              <Appear><ListItem>Power outage in June</ListItem></Appear>
+              <Appear><ListItem>Migrated the entire site to Amazon Web Services (images, database, code)</ListItem></Appear>
+              <Appear><ListItem>Done with no downtime in a day</ListItem></Appear>
+            </List>
+          </Slide>
 
           <Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Redbot</Heading>
@@ -206,7 +224,7 @@ export default class Presentation extends React.Component {
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Local development environments</Heading>
             <List>
-              <Appear><ListItem>esting production environments locally</ListItem></Appear>
+              <Appear><ListItem>Testing production environments locally</ListItem></Appear>
   						<Appear><ListItem>Avoids the works on mine scenario</ListItem></Appear>
   					</List>
   				</Slide>
@@ -218,7 +236,7 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Managed via a repo</ListItem></Appear>
   						<Appear><ListItem>Multiple sites can be run on the same host</ListItem></Appear>
   					</List>
-  					<pre class="fragment"><code data-trim>vagrant up</code></pre>
+            <Appear><CodePane textSize="1em" lang="bash">vagrant up</CodePane></Appear>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -228,23 +246,27 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Apache Bench</ListItem></Appear>
   						<Appear><ListItem>1000 request / 100 requests concurrency</ListItem></Appear>
   						<Appear><ListItem>Comparing old, development and new environments</ListItem></Appear>
-              </List>
+            </List>
 
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-
-  				    <Heading size={2} textColor="black" textFont="primary">Total time to complete 1000 requests</Heading>
-  				    <div id="bar-chart" class="fragment"></div>
+          <Slide transition={["zoom"]} bgColor="white">
+           <Image src={images.timePerRequest.replace("/", "")} height="661px" />
 
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-
-  				    <Heading size={2} textColor="black" textFont="primary">Requests per second</Heading>
-  				    <div id="bar-chart2" class="fragment"></div>
+          <Slide transition={["zoom"]} bgColor="white">
+           <Image src={images.requestsPerSecond.replace("/", "")} height="674px" />				    
 
   				</Slide>
+
+          <Slide transition={["zoom"]} bgColor="white">
+            <Image src={images.dailySessions.replace("/", "")} height="200px" />
+          </Slide>
+
+          <Slide transition={["zoom"]} bgColor="white">
+            <Image src={images.highPerformance.replace("/", "")} height="400px" />
+          </Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Deployment</Heading>
