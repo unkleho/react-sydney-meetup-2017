@@ -64,6 +64,8 @@ preloader(images);
 const theme = createTheme({
   primary: "#e30066",
   secondary: "black",
+  tertiary: "black",
+  quartenary: "black"
 }, {
   primary: "Circular-Medium",
   secondary: "Circular-Medium",
@@ -93,7 +95,7 @@ export default class Presentation extends React.Component {
 
   				<Slide transition={["slide"]} bgColor="black">
   					<Heading size={1} fit lineHeight={1} textColor="primary">Infrastructure</Heading>
-  					<Text textColor="white">The often overlooked but vital part of your app</Text>
+  					<Text textColor="white">The often overlooked but vital part of your app AKA the ugly stuff</Text>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
