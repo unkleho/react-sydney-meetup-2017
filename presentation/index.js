@@ -48,6 +48,10 @@ const images = {
   sdWhatson: require("../assets/sd-whatson.png"),
   sfWhatson: require("../assets/sf-whatson.png"),
   digitalLabels: require("../assets/digital-labels.png"),
+  dl1: require("../assets/dl1.png"),
+  dl2: require("../assets/dl2.png"),
+  dl3: require("../assets/dl3.png"),
+  dlcms: require("../assets/dlcms.png"),
 };
 
 preloader(images);
@@ -407,7 +411,7 @@ export default class Presentation extends React.Component {
             <Image src={images.sfWhatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
-          <Slide transition={["zoom"]} notes="Open up in browser">
+          <Slide transition={["zoom"]} notes="Open up in browser. Code shared across three websites.">
             <Image src={images.sdWhatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
@@ -415,11 +419,23 @@ export default class Presentation extends React.Component {
             <Heading size={1} lineHeight={1.3} textColor="black" textFont="primary">Digital Labels</Heading>
           </Slide>
 
-          <Slide transition={["zoom"]} notes="Open up in browser">
-            <Image src={images.digitalLabels.replace("/", "")} height="900px" margin="-140px 0 0 -6-px170px" />
+          <Slide transition={["zoom"]}>
+            <Image src={images.dl1.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
           </Slide>
 
-          <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!" notes="We could do a whole talk on this">
+          <Slide transition={["zoom"]}>
+            <Image src={images.dl2.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.dl3.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.dlcms.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
+          </Slide>
+
+          <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!" notes="Web application. We could do a whole talk on this">
             <Heading size={2} lineHeight={1.3} textColor="black" textFont="primary">Digital Labels</Heading>
             <Appear><Text lineHeight={1.5} margin="1em">Single Page App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">And Server Side App</Text></Appear>
