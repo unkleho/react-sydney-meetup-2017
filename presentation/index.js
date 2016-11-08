@@ -57,6 +57,7 @@ const images = {
   dl2: require("../assets/dl2.png"),
   dl3: require("../assets/dl3.png"),
   dlcms: require("../assets/dlcms.png"),
+  quark: require("../assets/quark.jpg"),
 };
 
 preloader(images);
@@ -263,7 +264,7 @@ export default class Presentation extends React.Component {
   				</Slide>
 
           <Slide transition={["zoom"]} bgColor="white">
-           <Image src={images.requestsPerSecond.replace("/", "")} height="674px" />				    
+           <Image src={images.requestsPerSecond.replace("/", "")} height="674px" />
 
   				</Slide>
 
@@ -383,6 +384,10 @@ export default class Presentation extends React.Component {
             <Image src={images.report.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
+          <Slide transition={["zoom"]}>
+            <Image src={images.quark.replace("/", "")} />
+          </Slide>
+
   				<Slide transition={["slide"]} bgColor="white" notes="We've also created our own custom plugins">
             <Heading size={1} fit lineHeight={1} textColor="black">MAAS Wordpress Plugins</Heading>
             <Appear><Text lineHeight={1.5} margin="1em">Salesforce Integration</Text></Appear>
@@ -405,6 +410,7 @@ export default class Presentation extends React.Component {
 
   				<Slide transition={["slide"]} bgColor="black">
   					<Heading size={1} fit lineHeight={1} textColor="primary">Frontend</Heading>
+            <Text lineHeight={1.5} textColor="white">The pretty stuff</Text>
   				</Slide>
 
 					<Slide transition={["slide"]} bgColor="white">
