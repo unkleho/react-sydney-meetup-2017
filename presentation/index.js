@@ -242,11 +242,8 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Managed via a repo</ListItem></Appear>
   						<Appear><ListItem>Multiple sites can be run on the same host</ListItem></Appear>
   					</List>
-<<<<<<< HEAD
+
             <Appear><CodePane textSize="1em" lang="bash">vagrant up</CodePane></Appear>
-=======
-  					<Appear><CodePane textSize="1em">vagrant up</CodePane></Appear>
->>>>>>> 7329633bc16137226bc6a6f5e579ca117be930d5
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
