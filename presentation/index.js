@@ -53,7 +53,8 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#e30066"
+  primary: "#e30066",
+  secondary: "black",
 }, {
   primary: "Circular-Medium",
   secondary: "Circular-Medium",
@@ -63,7 +64,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["slide"]} transitionDuration={500}>
+        <Deck transition={["slide"]} transitionDuration={500} bgColor="white">
 
           <Slide bgColor="primary">
   					<Heading size={1} lineHeight={1} textColor="black">A Modern Museum Web Stack</Heading>
@@ -331,27 +332,27 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.memberships.replace("/", "")} height="700px" />
+            <Image src={images.memberships.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.books.replace("/", "")} height="700px" />
+            <Image src={images.books.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.electronics.replace("/", "")} height="700px" />
+            <Image src={images.electronics.replace("/", "")} height="900px" margin="-140px 0 0 -60px "/>
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.donation.replace("/", "")} height="700px" />
+            <Image src={images.donation.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]} notes="Big up lachlan!">
-            <Image src={images.star.replace("/", "")} height="700px" />
+            <Image src={images.star.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.report.replace("/", "")} height="700px" />
+            <Image src={images.report.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
   				<Slide transition={["slide"]} bgColor="white" notes="We've also created our own custom plugins">
@@ -380,9 +381,15 @@ export default class Presentation extends React.Component {
 
 					<Slide transition={["slide"]} bgColor="white">
 						<Heading size={2} textColor="black" textFont="primary">What is frontend?</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">HTML</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">CSS</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Javascript</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em">Design</Text></Appear>
+					</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+						<Heading size={2} textColor="black" textFont="primary">Frontend tools</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">Live Code Updates</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Helps with design</Text></Appear>
 					</Slide>
 
 					<Slide transition={["slide"]} bgColor="white" notes="Combined from CSS, JS and Design. No page refresh.">
@@ -393,15 +400,15 @@ export default class Presentation extends React.Component {
 					</Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.whatson.replace("/", "")} height="700px" />
+            <Image src={images.whatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.sfWhatson.replace("/", "")} height="700px" />
+            <Image src={images.sfWhatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]} notes="Open up in browser">
-            <Image src={images.sdWhatson.replace("/", "")} height="700px" />
+            <Image src={images.sdWhatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide bgColor="white">
@@ -409,7 +416,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom"]} notes="Open up in browser">
-            <Image src={images.digitalLabels.replace("/", "")} height="700px" margin="-50px 0 0 -170px" />
+            <Image src={images.digitalLabels.replace("/", "")} height="900px" margin="-140px 0 0 -6-px170px" />
           </Slide>
 
           <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!" notes="We could do a whole talk on this">
