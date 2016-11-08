@@ -440,7 +440,8 @@ export default class Presentation extends React.Component {
             <Appear><Text lineHeight={1.5} margin="1em">Single Page App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">And Server Side App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Best of both worlds</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em">Data from EMu and new database</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Data from EMu and new database via <Link href="#">api.maas.museum</Link></Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Different stack to MAAS, SD and SF</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Tech research for new Collection website</Text></Appear>
           </Slide>
 
