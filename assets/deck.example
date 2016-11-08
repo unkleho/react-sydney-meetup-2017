@@ -1,28 +1,16 @@
-return (
-  <Deck transition={['zoom','slide']} transitionDuration={800}>
-    <Slide bgColor="primary">
-      <Heading size={1} fit caps>
-        React Presentations
-      </Heading>
-      <Heading size={2} fit caps>
-        Written In React
-      </Heading>
-    </Slide>
-    <Slide bgColor="black">
-      <Heading size={1} fit textColor="primary" textFont="secondary">
-        Wait What?
-      </Heading>
-    </Slide>
-    <Slide bgColor="primary" textColor="black" align="center top">
-      <Heading size={1} textColor="black" textFont="primary">
-        Thats right
-      </Heading>
-      <List>
-        <ListItem>Inline style based theme system</ListItem>
-        <ListItem>Autofit Text</ListItem>
-        <ListItem>react-router navigation</ListItem>
-        <ListItem>PDF Export</ListItem>
-      </List>
-    </Slide>
-  </Deck>
-)
+{
+  "name": "MAAS Website",
+  "type": "project",
+  "description": "Museum of Applied Arts and Sciences",
+  "homepage": "http://maas.museum",
+  "require": {
+    "php": ">=5.3.2",
+    "wordpress/wordpress": "4.2.2",
+    "fancyguy/webroot-installer": "1.1.0",
+    "composer/installers": "v1.0.12",
+    "vlucas/phpdotenv": "~1.0.6",
+    "wpackagist-plugin/advanced-custom-fields": "4.4.2",
+    "wpackagist-plugin/types": "1.7.7",
+    "wpackagist-plugin/better-wp-security": "4.8"
+  }
+}

@@ -53,12 +53,17 @@ const images = {
   sdWhatson: require("../assets/sd-whatson.png"),
   sfWhatson: require("../assets/sf-whatson.png"),
   digitalLabels: require("../assets/digital-labels.png"),
+  dl1: require("../assets/dl1.png"),
+  dl2: require("../assets/dl2.png"),
+  dl3: require("../assets/dl3.png"),
+  dlcms: require("../assets/dlcms.png"),
 };
 
 preloader(images);
 
 const theme = createTheme({
-  primary: "#e30066"
+  primary: "#e30066",
+  secondary: "black",
 }, {
   primary: "Circular-Medium",
   secondary: "Circular-Medium",
@@ -68,7 +73,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["slide"]} transitionDuration={500}>
+        <Deck transition={["slide"]} transitionDuration={500} bgColor="white">
 
           <Slide bgColor="primary">
   					<Heading size={1} lineHeight={1} textColor="black">A Modern Museum Web Stack</Heading>
@@ -123,9 +128,9 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Research</Heading>
-  					<p>What did we want to achieve?</p>
+  				<Slide transition={["slide"]} bgColor="black">
+  					<Heading size={2} textColor="white" textFont="primary">Research</Heading>
+  					<Text textColor="white" lineHeight={1.5}>What did we want to achieve?</Text>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -181,6 +186,7 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Build/test/teardown of infrastructure</ListItem></Appear>
   						<Appear><ListItem>Continuous integration</ListItem></Appear>
   					</List>
+
   					<Appear><CodePane textSize="1em" lang="bash">kitchen test maas-production</CodePane></Appear>
   				</Slide>
 
@@ -236,7 +242,11 @@ export default class Presentation extends React.Component {
   						<Appear><ListItem>Managed via a repo</ListItem></Appear>
   						<Appear><ListItem>Multiple sites can be run on the same host</ListItem></Appear>
   					</List>
+<<<<<<< HEAD
             <Appear><CodePane textSize="1em" lang="bash">vagrant up</CodePane></Appear>
+=======
+  					<Appear><CodePane textSize="1em">vagrant up</CodePane></Appear>
+>>>>>>> 7329633bc16137226bc6a6f5e579ca117be930d5
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -329,23 +339,10 @@ export default class Presentation extends React.Component {
 
 					<Slide transition={["slide"]} bgColor="white">
 						<p>composer.json</p>
-						{/*<pre><code data-trim contenteditable>{
-  "name": "MAAS Website",
-  "type": "project",
-  "description": "Museum of Applied Arts and Sciences",
-  "homepage": "http://maas.museum",
-  "require": {
-    "php": ">=5.3.2",
-    "wordpress/wordpress": "4.2.2",
-    "fancyguy/webroot-installer": "1.1.0",
-    "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist-plugin/advanced-custom-fields": "4.4.2",
-    "wpackagist-plugin/types": "1.7.7",
-    "wpackagist-plugin/better-wp-security": "4.8"
-  }
-}</code></pre>*/}
-						<pre class="fragment"><code>composer update</code></pre>
+            <CodePane lang="jsx"
+              source={require("raw!../assets/deck.example")}
+              margin="20px auto" />
+            <Appear><CodePane textSize="1em">composer update</CodePane></Appear>
 					</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -360,32 +357,33 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["slide"]} bgColor="white">
             <Heading size={2} textColor="black" textFont="primary">Woocommerce</Heading>
-            <Appear><Text lineHeight={1.5} margin="1em">Free Wordpress Plugin</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Free open source Wordpress Plugin</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Make money from extensions</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Now owned by Automattic, who run Wordpress.com</Text></Appear>
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.memberships.replace("/", "")} height="700px" />
+            <Image src={images.memberships.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.books.replace("/", "")} height="700px" />
+            <Image src={images.books.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.electronics.replace("/", "")} height="700px" />
+            <Image src={images.electronics.replace("/", "")} height="900px" margin="-140px 0 0 -60px "/>
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.donation.replace("/", "")} height="700px" />
+            <Image src={images.donation.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]} notes="Big up lachlan!">
-            <Image src={images.star.replace("/", "")} height="700px" />
+            <Image src={images.star.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.report.replace("/", "")} height="700px" />
+            <Image src={images.report.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
   				<Slide transition={["slide"]} bgColor="white" notes="We've also created our own custom plugins">
@@ -401,14 +399,12 @@ export default class Presentation extends React.Component {
             <Appear><Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">Applicants submit in Wordpress</Text></Appear>
             <Appear><Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">Editorial edit copy in Wordpress</Text></Appear>
             <Appear><Text lineHeight={1.5} padding="0.5em" bgColor="black" textColor="primary">Wordpress events = Source of truth</Text></Appear>
-            <Appear>
               <Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">
-                <Appear><span>Direct data for SD and SF</span></Appear>
-                <Appear><span>, copy for print booklets via Indesign Exporter</span></Appear>
-                <Appear><span>, feeds into <Link>maas.museum/whats-on</Link></span></Appear>
+                <Appear><Text bgColor="white" padding="0.5em">Direct data for SD and SF</Text></Appear>
+                <Appear><Text bgColor="white" padding="0.5em">Indesign Exporter for print booklet</Text></Appear>
+                <Appear><Text bgColor="white" padding="0.5em">Data for <Link>maas.museum/whats-on</Link></Text></Appear>
               </Text>
-            </Appear>
-  				</Slide>
+        	</Slide>
 
   				<Slide transition={["slide"]} bgColor="black">
   					<Heading size={1} fit lineHeight={1} textColor="primary">Frontend</Heading>
@@ -416,9 +412,15 @@ export default class Presentation extends React.Component {
 
 					<Slide transition={["slide"]} bgColor="white">
 						<Heading size={2} textColor="black" textFont="primary">What is frontend?</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">HTML</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">CSS</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Javascript</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em">Design</Text></Appear>
+					</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+						<Heading size={2} textColor="black" textFont="primary">Frontend tools</Heading>
+            <Appear><Text lineHeight={1.5} margin="1em">Live Code Updates</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Helps with design</Text></Appear>
 					</Slide>
 
 					<Slide transition={["slide"]} bgColor="white" notes="Combined from CSS, JS and Design. No page refresh.">
@@ -429,38 +431,52 @@ export default class Presentation extends React.Component {
 					</Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.whatson.replace("/", "")} height="700px" />
+            <Image src={images.whatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide transition={["zoom"]}>
-            <Image src={images.sfWhatson.replace("/", "")} height="700px" />
+            <Image src={images.sfWhatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
-          <Slide transition={["zoom"]} notes="Open up in browser">
-            <Image src={images.sdWhatson.replace("/", "")} height="700px" />
+          <Slide transition={["zoom"]} notes="Open up in browser. Code shared across three websites.">
+            <Image src={images.sdWhatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
           </Slide>
 
           <Slide bgColor="white">
             <Heading size={1} lineHeight={1.3} textColor="black" textFont="primary">Digital Labels</Heading>
           </Slide>
 
-          <Slide transition={["zoom"]} notes="Open up in browser">
-            <Image src={images.digitalLabels.replace("/", "")} height="700px" />
+          <Slide transition={["zoom"]}>
+            <Image src={images.dl1.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
           </Slide>
 
-          <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!">
+          <Slide transition={["zoom"]}>
+            <Image src={images.dl2.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.dl3.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
+          </Slide>
+
+          <Slide transition={["zoom"]}>
+            <Image src={images.dlcms.replace("/", "")} height="900px" margin="-140px 0 0 -340px" />
+          </Slide>
+
+          <Slide transition={["zoom"]} bgColor="white" notes="Lachlan!" notes="Web application. We could do a whole talk on this">
             <Heading size={2} lineHeight={1.3} textColor="black" textFont="primary">Digital Labels</Heading>
             <Appear><Text lineHeight={1.5} margin="1em">Single Page App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">And Server Side App</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Best of both worlds</Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Data from EMu and new database via <Link href="#">api.maas.museum</Link></Text></Appear>
+            <Appear><Text lineHeight={1.5} margin="1em">Different stack to MAAS, SD and SF</Text></Appear>
             <Appear><Text lineHeight={1.5} margin="1em">Tech research for new Collection website</Text></Appear>
           </Slide>
 
           <Slide transition={["zoom", "spin"]} bgColor="black">
             <Heading size={2} lineHeight={1.3} textColor="primary" textFont="primary">Stacks On</Heading>
-            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Infrastructure</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Backend</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em" textColor="white">Frontend...</Text></Appear>
+            <Appear><Heading textColor="white">Infrastructure</Heading></Appear>
+						<Appear><Heading textColor="white">Backend</Heading></Appear>
+						<Appear><Heading textColor="white">Frontend...</Heading></Appear>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="black">
