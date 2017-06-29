@@ -79,8 +79,8 @@ export default class Presentation extends React.Component {
         <Deck transition={["slide"]} transitionDuration={500} bgColor="white">
 
           <Slide bgColor="primary">
-  					<Heading size={1} lineHeight={1} textColor="black">React and GraphQL at the Powerhouse Museum</Heading>
-  					{/* <Heading size={4} textColor="white" textFont="primary">Powerhouse Museum</Heading> */}
+  					<Heading size={1} lineHeight={1} textColor="white">React & GraphQL</Heading>
+  					<Heading size={4} textColor="white" textFont="primary">at the Powerhouse Museum</Heading>
   					<p>
   						Kaho Cheung <a>@unkleho</a>
   					</p>
@@ -99,7 +99,7 @@ export default class Presentation extends React.Component {
   				<Slide transition={["slide"]} bgColor="black">
             <Heading size={3} textColor="white">1. Museum Collection Project</Heading>
 						<Appear><Heading size={3} textColor="white">2. Public GraphQL API</Heading></Appear>
-						<Appear><Heading size={3} textColor="white">3. Universal React Stack</Heading></Appear>
+						<Appear><Heading size={3} textColor="white">3. Collection Website</Heading></Appear>
 						<Appear><Heading size={3} textColor="white">4. Quick Demo</Heading></Appear>
   				</Slide>
 
@@ -177,6 +177,61 @@ export default class Presentation extends React.Component {
             </Heading>
   				</Slide>
 
+          {/* Collection Website */}
+
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={1} fit lineHeight={1} textColor="primary">Collection Website</Heading>
+            <Text lineHeight={1.5} textColor="black">https://collection.maas.museum</Text>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="primary" textFont="primary">Tech</Heading>
+            <List>
+              <Appear><ListItem>AWS</ListItem></Appear>
+              <Appear><ListItem>NodeJS</ListItem></Appear>
+  						<Appear><ListItem>PM2</ListItem></Appear>
+              <Appear><ListItem>Data from GraphQL API</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="primary" textFont="primary">Universal React</Heading>
+            <List>
+              <Appear><ListItem>Same JS code runs on server and browser</ListItem></Appear>
+              <Appear><ListItem>Made possible by Webpack</ListItem></Appear>
+              <Appear><ListItem>Diagram</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="primary" textFont="primary">Other JS Libraries</Heading>
+            <List>
+              <Appear><ListItem>Apollo</ListItem></Appear>
+              <Appear><ListItem>Redux</ListItem></Appear>
+              <Appear><ListItem>React Router</ListItem></Appear>
+              <Appear><ListItem>Searchkit</ListItem></Appear>
+              <Appear><ListItem>Photoswipe</ListItem></Appear>
+              <Appear><ListItem>React Helmet</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="primary" textFont="primary">Style Libraries</Heading>
+            <List>
+              <Appear><ListItem>PostCSS</ListItem></Appear>
+              <Appear><ListItem>Lost Grid</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+  					<Heading size={2} textColor="primary" textFont="primary">What would we do differently?</Heading>
+            <List>
+              <Appear><ListItem>Next.js</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          {/* Javscript Everywhere */}
+
   				<Slide transition={["slide"]} bgColor="white">
   					<Heading size={2} textColor="black" textFont="primary">Kitchen CI</Heading>
   					<p><a href="https://kitchen.io">https://kitchen.io</a></p>
@@ -186,16 +241,6 @@ export default class Presentation extends React.Component {
   					</List>
 
   					<Appear><CodePane textSize="1em" lang="bash">kitchen test maas-production</CodePane></Appear>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Bedrock</Heading>
-  					<p class="fragment"><a href="https://roots.io/bedrock/">https://roots.io/bedrock</a></p>
-            <List>
-              <Appear><ListItem>Modern development tools</ListItem></Appear>
-  						<Appear><ListItem>Easier configuration</ListItem></Appear>
-  						<Appear><ListItem>Improved folder structure</ListItem></Appear>
-  					</List>
   				</Slide>
 
 					<Slide transition={["slide"]} bgColor="white">
