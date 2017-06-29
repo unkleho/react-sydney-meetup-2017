@@ -38,7 +38,7 @@ require("../css/fonts.css");
 require("../css/styles.css");
 
 const images = {
-  iLoveLamp: require("../assets/i-love-lamp.gif"),
+  collectionStack: require("../assets/collection-stack.gif"),
   requestsPerSecond: require("../assets/requests-per-second.png"),
   timePerRequest: require("../assets/time-per-request.png"),
   dailySessions: require("../assets/daily-sessions-graph.png"),
@@ -79,107 +79,102 @@ export default class Presentation extends React.Component {
         <Deck transition={["slide"]} transitionDuration={500} bgColor="white">
 
           <Slide bgColor="primary">
-  					<Heading size={1} lineHeight={1} textColor="black">A Modern Museum Web Stack</Heading>
-  					<Heading size={4} textColor="white" textFont="primary">Museum of Applied Arts and Sciences</Heading>
+  					<Heading size={1} lineHeight={1} textColor="black">React and GraphQL at the Powerhouse Museum</Heading>
+  					{/* <Heading size={4} textColor="white" textFont="primary">Powerhouse Museum</Heading> */}
   					<p>
-  						Rowan Stenhouse <a>@shroganjo</a><br/>
   						Kaho Cheung <a>@unkleho</a>
   					</p>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="black">
-						<Heading size={1} fit lineHeight={1} textColor="primary">The Full Stack</Heading>
-						<Appear><Heading textColor="white">Infrastructure</Heading></Appear>
-						<Appear><Heading textColor="white">Backend</Heading></Appear>
-						<Appear><Heading textColor="white">Frontend</Heading></Appear>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="black">
-  					<Heading size={1} fit lineHeight={1} textColor="primary">Infrastructure</Heading>
-  					<Text textColor="white">The often overlooked but vital part of your app AKA the ugly stuff</Text>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-            <Heading size={2} textColor="black" textFont="primary">Traditional approach</Heading>
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading size={2} textColor="black" textFont="primary">Quick Intro</Heading>
   					<List>
-  						<Appear><ListItem>Pre-configured VPS</ListItem></Appear>
-  						<Appear><ListItem>Provided by the IT department</ListItem></Appear>
-  						<Appear><ListItem>LAMP</ListItem></Appear>
-  						<Appear><ListItem>Name the box</ListItem></Appear>
+  						<Appear><ListItem>Senior Digital Developer at MAAS (PHM)</ListItem></Appear>
+  						<Appear><ListItem>Design, frontend and backend stuff</ListItem></Appear>
+              <Appear><ListItem>Studied Industrial Design years ago</ListItem></Appear>
+              <Appear><ListItem>Using React for 1.5 years</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+  				<Slide transition={["slide"]} bgColor="black">
+            <Heading size={3} textColor="white">1. Museum Collection Project</Heading>
+						<Appear><Heading size={3} textColor="white">2. Public GraphQL API</Heading></Appear>
+						<Appear><Heading size={3} textColor="white">3. Universal React Stack</Heading></Appear>
+						<Appear><Heading size={3} textColor="white">4. Quick Demo</Heading></Appear>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading size={2} fit lineHeight={1} textColor="primary">Museum Collection Project</Heading>
+  					<List>
+  						<Appear><ListItem>Online catalogue of over 130,000 objects</ListItem></Appear>
+  						<Appear><ListItem>~155,000 images (of varying quality)</ListItem></Appear>
+              <Appear><ListItem>Collected over 135 years</ListItem></Appear>
+              <Appear><ListItem>Australia's largest and most significant collection of science, technological and design ingenuity</ListItem></Appear>
+              <Appear><ListItem>Went live in March 2017</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="white">
+            <Heading size={2} lineHeight={1} textColor="primary">Goals</Heading>
+  					<List>
+  						<Appear><ListItem>Replace ageing PHP/MS SQL stack</ListItem></Appear>
+  						<Appear><ListItem>Adopt microservice architecture</ListItem></Appear>
+  						<Appear><ListItem>Collection website (and other apps) to get data from central API service</ListItem></Appear>
   					</List>
   				</Slide>
 
           <Slide transition={["zoom"]} bgColor="white">
-           <Image src={images.iLoveLamp.replace("/", "")} height="480px" />
+            <Image src={images.collectionStack.replace("/", "")} height="500px" />
           </Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Benefits</Heading>
-  					<List>
-  						<Appear><ListItem>Easy to manage</ListItem></Appear>
-  						<Appear><ListItem>Community support</ListItem></Appear>
-  						<Appear><ListItem>Proven track record</ListItem></Appear>
-  					</List>
+          <Slide transition={["slide"]} bgColor="black">
+  					<Heading size={1} fit lineHeight={1} textColor="primary">GraphQL API</Heading>
+  					<Text textColor="white">Do your best, forget the REST</Text>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Disadvantages</Heading>
-  					<List>
-  						<Appear><ListItem>Fails under high load</ListItem></Appear>
-  						<Appear><ListItem>Resource intensive</ListItem></Appear>
-  						<Appear><ListItem>Tightly coupled</ListItem></Appear>
-  					</List>
-  				</Slide>
+          {/* WHY NOT REST? Ask crowd about GraphQL */}
 
   				<Slide transition={["slide"]} bgColor="black">
-  					<Heading size={2} textColor="white" textFont="primary">Research</Heading>
-  					<Text textColor="white" lineHeight={1.5}>What did we want to achieve?</Text>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Performance</Heading>
+  					<Heading size={2} textColor="primary" textFont="primary">Tech</Heading>
   					<List>
-  						<Appear><ListItem>Handle high loads</ListItem></Appear>
-  						<Appear><ListItem>Faster response times</ListItem></Appear>
-  						<Appear><ListItem>Is a key user experience</ListItem></Appear>
+              <Appear><ListItem textColor="white">AWS</ListItem></Appear>
+              <Appear><ListItem textColor="white">Docker</ListItem></Appear>
+  						<Appear><ListItem textColor="white">NodeJS</ListItem></Appear>
+  						<Appear><ListItem textColor="white">MongoDB</ListItem></Appear>
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Stability</Heading>
+          <Slide transition={["slide"]} bgColor="black">
+  					<Heading size={2} textColor="primary" textFont="primary">Libraries</Heading>
   					<List>
-  						<Appear><ListItem>Better uptime</ListItem></Appear>
-  						<Appear><ListItem>Fault tolerant</ListItem></Appear>
+              <Appear><ListItem textColor="white">Express & Express GraphQL</ListItem></Appear>
+              <Appear><ListItem textColor="white">Mongoose</ListItem></Appear>
+  						<Appear><ListItem textColor="white">Keystone JS</ListItem></Appear>
+              <Appear><ListItem textColor="white">PM2</ListItem></Appear>
+              <Appear><ListItem textColor="primary">GraphQL Compose</ListItem></Appear>
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Security</Heading>
+          <Slide transition={["slide"]} bgColor="black">
+  					<Heading size={2} textColor="primary" textFont="primary">GraphQL Compose</Heading>
+            <p><a href="https://github.com/nodkz/graphql-compose/">github.com/nodkz/graphql-compose</a></p>
   					<List>
-  						<Appear><ListItem>Ensure applications are easy to update</ListItem></Appear>
-  						<Appear><ListItem>&ldquo;HTTPS Everywhere&rdquo;</ListItem></Appear>
-  						<Appear><ListItem>Treat the infrastructure like the app</ListItem></Appear>
+              <Appear><ListItem textColor="white">Powerful tool to construct GraphQL schema</ListItem></Appear>
+              <Appear><ListItem textColor="white">Plugin based architecture</ListItem></Appear>
+              <Appear><ListItem textColor="white">graphql-compose-mongoose builds types from Mongoose models</ListItem></Appear>
+              <Appear><ListItem textColor="white">Resulting schema automatically adds pagination, sorting and filtering.</ListItem></Appear>
+              <Appear><ListItem textColor="white">Mutations easy to do</ListItem></Appear>
   					</List>
   				</Slide>
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Infrastructure as code</Heading>
-  					<List>
-  						<Appear><ListItem>Infrastructure code is stored in a repo</ListItem></Appear>
-  						<Appear><ListItem>Easier to maintain upgrade</ListItem></Appear>
-  						<Appear><ListItem>More approachable for developers</ListItem></Appear>
-  						<Appear><ListItem>Options: Docker, Chef, Ansible, Puppet</ListItem></Appear>
-  					</List>
-  				</Slide>
+          {/* GraphQL Compose + Keystone JS = Headless GraphQL CMS */}
 
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Chef</Heading>
-  					<p><a href="https://www.chef.io/">https://www.chef.io/</a></p>
-  					<List>
-  						<Appear><ListItem>Ruby based</ListItem></Appear>
-  						<Appear><ListItem>Encrypt sensitive config</ListItem></Appear>
-  						<Appear><ListItem>The code has to be tested</ListItem></Appear>
-  					</List>
+          <Slide transition={["slide"]} bgColor="black">
+  					<Heading size={4} fit textColor="primary" textFont="primary">
+              <Appear><span>GraphQL Compose </span></Appear> +
+              <Appear><span> Keystone JS</span></Appear> =
+              <Appear><span> Headless GraphQL CMS</span></Appear>
+            </Heading>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
@@ -191,131 +186,6 @@ export default class Presentation extends React.Component {
   					</List>
 
   					<Appear><CodePane textSize="1em" lang="bash">kitchen test maas-production</CodePane></Appear>
-  				</Slide>
-
-          <Slide transition={["slide"]} bgColor="white">
-            <Heading size={2} textColor="black" textFont="primary">So what&rsquo;s the point?</Heading>
-            <List>
-              <Appear><ListItem>Power outage in June</ListItem></Appear>
-              <Appear><ListItem>Migrated the entire site to Amazon Web Services (images, database, code)</ListItem></Appear>
-              <Appear><ListItem>Done with no downtime in a day</ListItem></Appear>
-            </List>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Redbot</Heading>
-  					<p><a href="https://redbot.org/">https://redbot.org/</a></p>
-            <List>
-              <Appear><ListItem>Tests server header responses</ListItem></Appear>
-  						<Appear><ListItem>Caching, server settings</ListItem></Appear>
-  					</List>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Qualys SSL Labs</Heading>
-  					<p><a href="https://www.ssllabs.com/ssltest/">https://www.ssllabs.com/ssltest/</a></p>
-            <List>
-              <Appear><ListItem>Testing SSL configuration</ListItem></Appear>
-  						<Appear><ListItem>Vulnerabilities to SSL exploits</ListItem></Appear>
-  					</List>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Pingdom Tools</Heading>
-  					<p><a href="http://tools.pingdom.com/fpt/">http://tools.pingdom.com/fpt/</a></p>
-            <List>
-              <Appear><ListItem>Asset waterfall</ListItem></Appear>
-  						<Appear><ListItem>Testing asset compression</ListItem></Appear>
-  						<Appear><ListItem>Response times</ListItem></Appear>
-  					</List>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Local development environments</Heading>
-            <List>
-              <Appear><ListItem>Testing production environments locally</ListItem></Appear>
-  						<Appear><ListItem>Avoids the works on mine scenario</ListItem></Appear>
-  					</List>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Vagrant</Heading>
-            <List>
-              <Appear><ListItem>Consistent development environments</ListItem></Appear>
-  						<Appear><ListItem>Managed via a repo</ListItem></Appear>
-  						<Appear><ListItem>Multiple sites can be run on the same host</ListItem></Appear>
-  					</List>
-
-            <Appear><CodePane textSize="1em" lang="bash">vagrant up</CodePane></Appear>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-
-  				    <Heading size={2} textColor="black" textFont="primary">Performance improvements</Heading>
-            <List>
-              <Appear><ListItem>Apache Bench</ListItem></Appear>
-  						<Appear><ListItem>1000 request / 100 requests concurrency</ListItem></Appear>
-  						<Appear><ListItem>Comparing old, development and new environments</ListItem></Appear>
-            </List>
-
-  				</Slide>
-
-          <Slide transition={["zoom"]} bgColor="white">
-           <Image src={images.timePerRequest.replace("/", "")} height="661px" />
-
-  				</Slide>
-
-          <Slide transition={["zoom"]} bgColor="white">
-           <Image src={images.requestsPerSecond.replace("/", "")} height="674px" />
-
-  				</Slide>
-
-          <Slide transition={["zoom"]} bgColor="white">
-            <Image src={images.dailySessions.replace("/", "")} height="200px" />
-          </Slide>
-
-          <Slide transition={["zoom"]} bgColor="white">
-            <Image src={images.highPerformance.replace("/", "")} height="400px" />
-          </Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Deployment</Heading>
-            <List>
-              <Appear><ListItem>Automated</ListItem></Appear>
-  						<Appear><ListItem>Consistent &amp; repeatable</ListItem></Appear>
-  						<Appear><ListItem>Rollback</ListItem></Appear>
-  					</List>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">Capistrano</Heading>
-  					<p><a href="http://capistranorb.com/">http://capistranorb.com/</a></p>
-            <List>
-              <Appear><ListItem>Easily scriptable</ListItem></Appear>
-  						<Appear><ListItem>Composer package management</ListItem></Appear>
-  						<Appear><ListItem>Cache flushing</ListItem></Appear>
-  						<Appear><ListItem>Deployment notifications</ListItem></Appear>
-  					</List>
-  					<Appear><CodePane textSize="1em">cap production deploy</CodePane></Appear>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary">New Relic</Heading>
-  					<p><a href="http://newrelic.com/">http://newrelic.com/</a></p>
-            <List>
-              <Appear><ListItem>Error reporting on back/front end</ListItem></Appear>
-  						<Appear><ListItem>Real time application monitoring</ListItem></Appear>
-  						<Appear><ListItem>Deployment tracking</ListItem></Appear>
-  					</List>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="black">
-  					<Heading size={1} fit lineHeight={1} textColor="primary">Backend</Heading>
-  					<Text textColor="white">12 Factor App (almost)</Text>
-  				</Slide>
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="black" textFont="primary"><Appear><span>Bedrock</span></Appear> Wordpress <Appear><span>Boilerplate</span></Appear></Heading>
   				</Slide>
 
   				<Slide transition={["slide"]} bgColor="white">
