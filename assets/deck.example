@@ -1,16 +1,41 @@
-{
-  "name": "MAAS Website",
-  "type": "project",
-  "description": "Museum of Applied Arts and Sciences",
-  "homepage": "http://maas.museum",
-  "require": {
-    "php": ">=5.3.2",
-    "wordpress/wordpress": "4.2.2",
-    "fancyguy/webroot-installer": "1.1.0",
-    "composer/installers": "v1.0.12",
-    "vlucas/phpdotenv": "~1.0.6",
-    "wpackagist-plugin/advanced-custom-fields": "4.4.2",
-    "wpackagist-plugin/types": "1.7.7",
-    "wpackagist-plugin/better-wp-security": "4.8"
+const ObjectModel = new mongoose.model('Object', {
+  title: String,
+  description: String,
+});
+
+const ObjectTC = composeWithMongoose(ObjectModel);
+
+GQC.rootQuery().addFields({
+  ObjectById: ObjectTC.getResolver('findById'),
+  ObjectMany: ObjectTC.getResolver('findMany'),
+});
+
+GQC.rootMutation().addFields({
+  ObjectCreate: ObjectTC.getResolver('createOne'),
+  ObjectUpdateById: ObjectTC.getResolver('updateById'),
+  ObjectRemoveById: ObjectTC.getResolver('removeById'),
+});
+
+const graphqlSchema = GQC.buildSchema();
+...
+app.use('/graphql', graphqlHTTP({
+  schema: graphqlSchema,
+}));
+
+ObjectTC.addFields({
+  customField: {
+    type: 'String',
+    resolve: (source, args, context, info) => 'some value',
   }
-}
+});
+
+ObjectTC.addRelation(
+  'parent',
+  () => ({
+    resolver: ObjectTC.getResolver('findById'),
+    args: {
+      _ids: (source) => source.parentId,
+    },
+    projection: { parentId: true },
+  })
+)

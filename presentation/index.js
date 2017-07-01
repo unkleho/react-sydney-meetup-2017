@@ -1,7 +1,4 @@
-// Import React
-import React from "react";
-
-// Import Spectacle Core tags
+import React, { Component } from "react";
 import {
   Appear,
   BlockQuote,
@@ -21,6 +18,7 @@ import {
   Spectacle,
   Text
 } from "spectacle";
+import CodeSlide from 'spectacle-code-slide';
 
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
@@ -39,25 +37,7 @@ require("../css/styles.css");
 
 const images = {
   collectionStack: require("../assets/collection-stack.gif"),
-  requestsPerSecond: require("../assets/requests-per-second.png"),
-  timePerRequest: require("../assets/time-per-request.png"),
-  dailySessions: require("../assets/daily-sessions-graph.png"),
-  highPerformance: require("../assets/high-performance.jpg"),
   memberships: require("../assets/memberships.png"),
-  books: require("../assets/books.png"),
-  electronics: require("../assets/electronics.png"),
-  donation: require("../assets/donation.png"),
-  report: require("../assets/woo-report.png"),
-  star: require("../assets/name-a-star.png"),
-  whatson: require("../assets/whatson.png"),
-  sdWhatson: require("../assets/sd-whatson.png"),
-  sfWhatson: require("../assets/sf-whatson.png"),
-  digitalLabels: require("../assets/digital-labels.png"),
-  dl1: require("../assets/dl1.png"),
-  dl2: require("../assets/dl2.png"),
-  dl3: require("../assets/dl3.png"),
-  dlcms: require("../assets/dlcms.png"),
-  quark: require("../assets/quark.jpg"),
 };
 
 preloader(images);
@@ -72,7 +52,9 @@ const theme = createTheme({
   secondary: "Circular-Medium",
 });
 
-export default class Presentation extends React.Component {
+const codeTextSize = 30;
+
+class Presentation extends Component {
   render() {
     return (
       <Spectacle theme={theme}>
@@ -100,7 +82,8 @@ export default class Presentation extends React.Component {
             <Heading size={3} textColor="white">1. Museum Collection Project</Heading>
 						<Appear><Heading size={3} textColor="white">2. Public GraphQL API</Heading></Appear>
 						<Appear><Heading size={3} textColor="white">3. Collection Website</Heading></Appear>
-						<Appear><Heading size={3} textColor="white">4. Quick Demo</Heading></Appear>
+            <Appear><Heading size={3} textColor="white">4. What did we learn?</Heading></Appear>
+						<Appear><Heading size={3} textColor="white">5. Quick Demo</Heading></Appear>
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="white">
@@ -123,14 +106,14 @@ export default class Presentation extends React.Component {
   					</List>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="white">
+          {/* <Slide transition={["slide"]} bgColor="white">
             <Heading size={2} lineHeight={1} textColor="primary">Approach</Heading>
   					<List>
   						<Appear><ListItem>Build API</ListItem></Appear>
   						<Appear><ListItem>Use React on smaller project (Digital Labels) Video?</ListItem></Appear>
   						<Appear><ListItem>Fork and build Collection website</ListItem></Appear>
   					</List>
-  				</Slide>
+  				</Slide> */}
 
           <Slide transition={["zoom"]} bgColor="white">
             <Image src={images.collectionStack.replace("/", "")} height="500px" />
@@ -160,7 +143,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem textColor="white">Mongoose</ListItem></Appear>
   						<Appear><ListItem textColor="white">Keystone JS</ListItem></Appear>
               <Appear><ListItem textColor="white">PM2</ListItem></Appear>
-              <Appear><ListItem textColor="primary">GraphQL Compose</ListItem></Appear>
+              <Appear><ListItem textColor="white">GraphQL Compose</ListItem></Appear>
   					</List>
   				</Slide>
 
@@ -175,6 +158,25 @@ export default class Presentation extends React.Component {
               <Appear><ListItem textColor="white">Mutations easy to do</ListItem></Appear>
   					</List>
   				</Slide>
+
+          {/* <Slide transition={["slide"]} bgColor="secondary"> */}
+            <CodeSlide
+              transition={[]}
+              lang="javascript"
+              textSize={codeTextSize}
+              code={require("raw!../assets/deck.example")}
+              // margin="20px auto"
+              maxWidth="1300px"
+              ranges={[
+                { loc: [0, 4], title: 'Create Model' },
+                { loc: [5, 6] },
+                { loc: [7, 11] },
+                { loc: [12, 17], title: 'Add mutations' },
+                { loc: [18, 19] },
+                { loc: [20, 23] },
+              ]}
+            />
+					{/* </Slide> */}
 
           {/* GraphQL Compose + Keystone JS = Headless GraphQL CMS */}
 
@@ -312,57 +314,16 @@ export default class Presentation extends React.Component {
   					<Heading size={2} textColor="white" textFont="primary">collection.maas.museum</Heading>
   				</Slide>
 
+          <Slide transition={["slide"]} bgColor="primary">
+  					<Heading size={2} textColor="white" textFont="primary">Job</Heading>
+  				</Slide>
+
           {/* END */}
-
-  				<Slide transition={["slide"]} bgColor="white">
-  					<Heading size={2} textColor="secondary" textFont="primary">Kitchen CI</Heading>
-  					<p><a href="https://kitchen.io">https://kitchen.io</a></p>
-  					<List>
-  						<Appear><ListItem>Build/test/teardown of infrastructure</ListItem></Appear>
-  						<Appear><ListItem>Continuous integration</ListItem></Appear>
-  					</List>
-
-  					<Appear><CodePane textSize="1em" lang="bash">kitchen test maas-production</CodePane></Appear>
-  				</Slide>
-
-					<Slide transition={["slide"]} bgColor="white">
-						<p>composer.json</p>
-            <CodePane lang="jsx"
-              source={require("raw!../assets/deck.example")}
-              margin="20px auto" />
-            <Appear><CodePane textSize="1em">composer update</CodePane></Appear>
-					</Slide>
-
-          <Slide transition={["zoom"]}>
-            <Image src={images.memberships.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
-          </Slide>
-
-  				<Slide transition={["slide"]} bgColor="white" notes="We've also created our own custom plugins">
-            <Heading size={1} fit lineHeight={1} textColor="secondary">MAAS Wordpress Plugins</Heading>
-            <Appear><Text lineHeight={1.5} margin="1em">Salesforce Integration</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em">Indesign Exporter</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em">Whats On Events</Text></Appear>
-            <Appear><Text lineHeight={1.5} margin="1em">Festival Event Submission Platform</Text></Appear>
-  				</Slide>
-
-          <Slide transition={["slide"]} bgColor="white" notes="Lachlan! No data migration. No more Word docs with multiple versions. Just one event to edit.">
-            <Text lineHeight={1.5} textColor="secondary">Festival Workflow</Text>
-            <Appear><Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">Applicants submit in Wordpress</Text></Appear>
-            <Appear><Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">Editorial edit copy in Wordpress</Text></Appear>
-            <Appear><Text lineHeight={1.5} padding="0.5em" bgColor="secondary" textColor="primary">Wordpress events = Source of truth</Text></Appear>
-              <Text lineHeight={1.5} padding="0.5em" textColor="white" bgColor="primary">
-                <Appear><Text bgColor="white" padding="0.5em">Direct data for SD and SF</Text></Appear>
-                <Appear><Text bgColor="white" padding="0.5em">Indesign Exporter for print booklet</Text></Appear>
-                <Appear><Text bgColor="white" padding="0.5em">Data for <Link>maas.museum/whats-on</Link></Text></Appear>
-              </Text>
-        	</Slide>
-
-          <Slide transition={["zoom"]}>
-            <Image src={images.whatson.replace("/", "")} height="900px" margin="-140px 0 0 -60px" />
-          </Slide>
 
         </Deck>
       </Spectacle>
     );
   }
 }
+
+export default Presentation;
