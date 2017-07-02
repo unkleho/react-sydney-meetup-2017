@@ -181,6 +181,7 @@ class Presentation extends Component {
             textSize={codeTextSize}
             code={require("raw!../assets/code/graphqlCompose2.txt")}
             maxWidth="1300px"
+            maxHeight="900px"
             ranges={[
               { loc: [0, 6], title: 'Add custom field' },
               { loc: [7, 17], title: 'Add relationship' },
@@ -280,7 +281,8 @@ class Presentation extends Component {
               <Appear><ListItem textColor="white">One language</ListItem></Appear>
               <Appear><ListItem textColor="white">Less code</ListItem></Appear>
               <Appear><ListItem textColor="white">Less load on server</ListItem></Appear>
-              <Appear><ListItem textColor="white">Search indexing, social sharing.</ListItem></Appear>
+              <Appear><ListItem textColor="white">Search indexing</ListItem></Appear>
+              <Appear><ListItem textColor="white">FB/Twitter metadata</ListItem></Appear>
   					</List>
   				</Slide>
 
@@ -344,26 +346,46 @@ class Presentation extends Component {
   					</List>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="secondary">
+          <Slide transition={["slide"]} bgColor="secondary" maxHeight="900px">
   					<Heading size={4} textColor="primary" textFont="primary">What would we do differently?</Heading>
             <List>
               <Appear><ListItem textColor="white">graph.cool</ListItem></Appear>
-              <Appear><ListItem textColor="white">Next.js</ListItem></Appear>
-              <Appear><ListItem textColor="white">JS Decorators?</ListItem></Appear>
+              <Appear><ListItem textColor="white">Relay</ListItem></Appear>
+              <Appear><ListItem textColor="white">JS Decorators syntax?</ListItem></Appear>
               <Appear><ListItem textColor="white">Handle .env better</ListItem></Appear>
               <Appear><ListItem textColor="white">Code splitting</ListItem></Appear>
               <Appear><ListItem textColor="white">CSS in JS</ListItem></Appear>
               <Appear><ListItem textColor="white">Use css-next syntax</ListItem></Appear>
+              <Appear><ListItem textColor="white">Next.js</ListItem></Appear>
+  					</List>
+  				</Slide>
+
+          <Slide transition={["slide"]} bgColor="secondary">
+  					<Heading size={4} textColor="primary" textFont="primary">Next.js</Heading>
+            <List>
+              <Appear><ListItem textColor="white"><strike>react-router</strike></ListItem></Appear>
+              <Appear><ListItem textColor="white"><strike>react-helmet</strike></ListItem></Appear>
+              <Appear><ListItem textColor="white"><strike>webpack</strike></ListItem></Appear>
+              <Appear><ListItem textColor="white">Automatic code splitting</ListItem></Appear>
+              <Appear><ListItem textColor="white">CSS in JS</ListItem></Appear>
+              <Appear><ListItem textColor="white">One dependency</ListItem></Appear>
+              <Appear><ListItem textColor="white">Recipes for Redux, Apollo, MobX etc</ListItem></Appear>
   					</List>
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} textColor="white" textFont="primary">collection.maas.museum</Heading>
+            <Heading size={5} textColor="secondary" textFont="primary">Demo</Heading>
+  					<Heading size={3} textColor="white" textFont="primary">collection.maas.museum</Heading>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} textColor="white" textFont="primary">Job</Heading>
+          <Slide transition={["slide"]} bgColor="primary" maxWidth="1200px">
+  					<Heading size={2} textColor="white" textFont="primary">Work at the Powerhouse</Heading>
+            <Text size={5} textColor="white" textFont="primary"><p>Senior Digital Developer job application ends this Friday</p></Text>
   				</Slide>
+
+          {/* <Slide transition={["slide"]} bgColor="primary">
+  					<Heading size={2} textColor="white" textFont="primary">made with Spectacle</Heading>
+  				</Slide> */}
 
           {/* END */}
 
