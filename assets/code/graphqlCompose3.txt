@@ -1,0 +1,21 @@
+const Object = new keystone.List('Object', {
+	singular: 'set',
+  ...
+});
+
+Object.add({
+	title: { type: String, required: true },
+	description: { type: Types.Html },
+});
+
+Object.register();
+
+// Schema file
+const ObjectModel = keystone.list('Object').model;
+
+const ObjectTC = composeWithMongoose(ObjectModel);
+
+GQC.rootQuery().addFields({
+  ObjectById: ObjectTC.getResolver('findById'),
+  ObjectMany: ObjectTC.getResolver('findMany'),
+});

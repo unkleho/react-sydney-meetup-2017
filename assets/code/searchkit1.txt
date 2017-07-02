@@ -1,0 +1,36 @@
+const searchkit = new SearchkitManager("https://api.maas.museum/search");
+
+const App = () => (
+  <SearchkitProvider searchkit={searchkit}>
+    <Layout>
+      <TopBar>
+        <SearchBox
+          autofocus={true}
+          searchOnChange={true}
+        />
+      </TopBar>
+
+      <LayoutBody>
+        <SideBar>
+          <HierarchicalMenuFilter
+            fields={["type.raw", "genres.raw"]}
+            title="Categories"
+            id="categories"
+          />
+          <RefinementListFilter
+            id="actors"
+            title="Actors"
+            field="actors.raw"
+            operator="AND"
+            size={10}
+          />
+        </SideBar>
+        <LayoutResults>
+          <Hits mod="sk-hits-grid" hitsPerPage={10} itemComponent={MovieHitsGridItem}
+            sourceFilter={["title", "poster", "imdbId"]}/>
+          <NoHits/>
+        </LayoutResults>
+      </LayoutBody>
+    </Layout>
+  </SearchkitProvider>
+)

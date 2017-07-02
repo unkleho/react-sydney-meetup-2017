@@ -21,21 +21,3 @@ const graphqlSchema = GQC.buildSchema();
 app.use('/graphql', graphqlHTTP({
   schema: graphqlSchema,
 }));
-
-ObjectTC.addFields({
-  customField: {
-    type: 'String',
-    resolve: (source, args, context, info) => 'some value',
-  }
-});
-
-ObjectTC.addRelation(
-  'parent',
-  () => ({
-    resolver: ObjectTC.getResolver('findById'),
-    args: {
-      _ids: (source) => source.parentId,
-    },
-    projection: { parentId: true },
-  })
-)

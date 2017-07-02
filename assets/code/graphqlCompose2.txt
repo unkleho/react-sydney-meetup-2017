@@ -1,0 +1,17 @@
+ObjectTC.addFields({
+  customField: {
+    type: 'String',
+    resolve: (source, args, context, info) => 'some value',
+  },
+});
+
+ObjectTC.addRelation(
+  'parent',
+  () => ({
+    resolver: ObjectTC.getResolver('findById'),
+    args: {
+      _id: (source) => source.parentId,
+    },
+    projection: { parentId: true },
+  }),
+)

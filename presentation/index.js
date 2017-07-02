@@ -159,26 +159,51 @@ class Presentation extends Component {
   					</List>
   				</Slide>
 
-          {/* <Slide transition={["slide"]} bgColor="secondary"> */}
-            <CodeSlide
-              transition={[]}
-              lang="javascript"
-              textSize={codeTextSize}
-              code={require("raw!../assets/deck.example")}
-              // margin="20px auto"
-              maxWidth="1300px"
-              ranges={[
-                { loc: [0, 4], title: 'Create Model' },
-                { loc: [5, 6] },
-                { loc: [7, 11] },
-                { loc: [12, 17], title: 'Add mutations' },
-                { loc: [18, 19] },
-                { loc: [20, 23] },
-              ]}
-            />
-					{/* </Slide> */}
+          <CodeSlide
+            transition={[]}
+            lang="javascript"
+            textSize={codeTextSize}
+            code={require("raw!../assets/code/graphqlCompose1.txt")}
+            maxWidth="1300px"
+            ranges={[
+              { loc: [0, 4], title: 'Create Model' },
+              { loc: [5, 6] },
+              { loc: [7, 11] },
+              { loc: [12, 17] },
+              { loc: [18, 19] },
+              { loc: [20, 23] },
+            ]}
+          />
+
+          <CodeSlide
+            transition={[]}
+            lang="javascript"
+            textSize={codeTextSize}
+            code={require("raw!../assets/code/graphqlCompose2.txt")}
+            maxWidth="1300px"
+            ranges={[
+              { loc: [0, 6], title: 'Add custom field' },
+              { loc: [7, 17], title: 'Add relationship' },
+            ]}
+          />
 
           {/* GraphQL Compose + Keystone JS = Headless GraphQL CMS */}
+
+          <CodeSlide
+            transition={[]}
+            lang="javascript"
+            textSize={codeTextSize}
+            code={require("raw!../assets/code/graphqlCompose3.txt")}
+            maxWidth="1300px"
+            ranges={[
+              { loc: [0, 4], title: 'Keystone JS' },
+              { loc: [5, 9] },
+              { loc: [10, 11] },
+              { loc: [12, 14] },
+              { loc: [15, 16], title: 'Re-use Keystone/Mongoose model' },
+              { loc: [17, 21] },
+            ]}
+          />
 
           <Slide transition={["slide"]} bgColor="secondary">
   					<Heading size={4} textColor="primary" textFont="primary">
@@ -190,7 +215,13 @@ class Presentation extends Component {
             </Heading>
   				</Slide>
 
-          {/* Collection Website */}
+          <Slide transition={["slide"]} bgColor="secondary">
+  					<Heading size={3} textColor="primary" textFont="primary">api.maas.museum/graphql</Heading>
+  				</Slide>
+
+          {/*
+            * Collection Website
+            * -------------------------------------------------------------- */}
 
           <Slide transition={["slide"]} bgColor="white">
   					<Heading size={1} fit lineHeight={1} textColor="primary">Collection Website</Heading>
@@ -202,7 +233,7 @@ class Presentation extends Component {
             <List>
               <Appear><ListItem textColor="white">AWS</ListItem></Appear>
               <Appear><ListItem textColor="white">NodeJS</ListItem></Appear>
-  						<Appear><ListItem textColor="white">PM2</ListItem></Appear>
+              <Appear><ListItem textColor="white">Docker</ListItem></Appear>
               <Appear><ListItem textColor="white">Data from api.maas.museum</ListItem></Appear>
               <Appear><ListItem textColor="white">Code based on kriasoft/react-starter-kit</ListItem></Appear>
   					</List>
@@ -259,7 +290,7 @@ class Presentation extends Component {
               <Appear><ListItem textColor="white">Hard to set up</ListItem></Appear>
               <Appear><ListItem textColor="white">ENVs are tricky</ListItem></Appear>
               <Appear><ListItem textColor="white">Some packages aren't Universal</ListItem></Appear>
-              <Appear><ListItem textColor="white">Need to check typeof window !== 'undefined' sometimes</ListItem></Appear>
+              <Appear><ListItem textColor="white"><code>typeof window !== 'undefined'</code> sometimes required</ListItem></Appear>
   					</List>
   				</Slide>
 
@@ -269,12 +300,28 @@ class Presentation extends Component {
               <Appear><ListItem textColor="white">Apollo</ListItem></Appear>
               <Appear><ListItem textColor="white">Redux</ListItem></Appear>
               <Appear><ListItem textColor="white">React Router (v3)</ListItem></Appear>
-              <Appear><ListItem textColor="white">Searchkit</ListItem></Appear>
               <Appear><ListItem textColor="white">Photoswipe</ListItem></Appear>
               <Appear><ListItem textColor="white">React Helmet</ListItem></Appear>
               <Appear><ListItem textColor="white">React Google Analytics Module</ListItem></Appear>
+              <Appear><ListItem textColor="white">Searchkit</ListItem></Appear>
   					</List>
   				</Slide>
+
+          {/* <CodeSlide
+            transition={[]}
+            lang="jsx"
+            textSize={codeTextSize}
+            code={require("raw!../assets/code/searchkit1.txt")}
+            maxWidth="1300px"
+            ranges={[
+              { loc: [0, 1], title: 'Searchkit' },
+              { loc: [2, 4] },
+              { loc: [6, 10] },
+              { loc: [12, 14] },
+              { loc: [15, 16], title: 'Re-use Keystone/Mongoose model' },
+              { loc: [17, 21] },
+            ]}
+          /> */}
 
           <Slide transition={["slide"]} bgColor="secondary">
   					<Heading size={2} textColor="primary" textFont="primary">Styles</Heading>
@@ -300,8 +347,8 @@ class Presentation extends Component {
           <Slide transition={["slide"]} bgColor="secondary">
   					<Heading size={4} textColor="primary" textFont="primary">What would we do differently?</Heading>
             <List>
-              <Appear><ListItem textColor="white">Next.js</ListItem></Appear>
               <Appear><ListItem textColor="white">graph.cool</ListItem></Appear>
+              <Appear><ListItem textColor="white">Next.js</ListItem></Appear>
               <Appear><ListItem textColor="white">JS Decorators?</ListItem></Appear>
               <Appear><ListItem textColor="white">Handle .env better</ListItem></Appear>
               <Appear><ListItem textColor="white">Code splitting</ListItem></Appear>
