@@ -1,5 +1,5 @@
 const Object = new keystone.List('Object', {
-	singular: 'set',
+	singular: 'Object',
   ...
 });
 
@@ -17,5 +17,5 @@ const ObjectTC = composeWithMongoose(ObjectModel);
 
 GQC.rootQuery().addFields({
   ObjectById: ObjectTC.getResolver('findById'),
-  ObjectMany: ObjectTC.getResolver('findMany'),
+  Objects: ObjectTC.getResolver('findMany'),
 });

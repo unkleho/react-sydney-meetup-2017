@@ -1,3 +1,7 @@
+import mongoose from 'mongoose';
+import composeWithMongoose from 'graphql-compose-mongoose';
+import { GQC } from 'graphql-compose';
+
 const ObjectModel = new mongoose.model('Object', {
   title: String,
   description: String,
@@ -7,7 +11,8 @@ const ObjectTC = composeWithMongoose(ObjectModel);
 
 GQC.rootQuery().addFields({
   ObjectById: ObjectTC.getResolver('findById'),
-  ObjectMany: ObjectTC.getResolver('findMany'),
+  ObjectByIds: ObjectTC.getResolver('findByIds'),
+  Objects: ObjectTC.getResolver('findMany'),
 });
 
 GQC.rootMutation().addFields({

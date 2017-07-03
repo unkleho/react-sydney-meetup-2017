@@ -63,16 +63,17 @@ class Presentation extends Component {
           <Slide bgColor="primary">
   					<Heading size={1} lineHeight={1} textColor="white">React & GraphQL</Heading>
   					<Heading size={4} textColor="white" textFont="primary">at the Powerhouse Museum</Heading>
-  					<p>
+            <br/>
+  					<Text>
   						Kaho Cheung <a>@unkleho</a>
-  					</p>
+  					</Text>
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="white">
             <Heading size={2} textColor="secondary" textFont="primary">Quick Intro</Heading>
   					<List>
   						<Appear><ListItem>Senior Digital Developer at MAAS (PHM)</ListItem></Appear>
-  						<Appear><ListItem>frontend, backend, design stuff</ListItem></Appear>
+  						<Appear><ListItem>Frontend, backend, design stuff</ListItem></Appear>
               <Appear><ListItem>Studied Industrial Design years ago</ListItem></Appear>
               <Appear><ListItem>Using React for 1.5 years</ListItem></Appear>
   					</List>
@@ -115,8 +116,8 @@ class Presentation extends Component {
   					</List>
   				</Slide> */}
 
-          <Slide transition={["zoom"]} bgColor="white">
-            <Image src={images.collectionStack.replace("/", "")} height="500px" />
+          <Slide transition={["zoom"]} bgColor="white" maxWidth="1400px" maxHeight="1000px">
+            <Image src={images.collectionStack.replace("/", "")} />
           </Slide>
 
           <Slide transition={["slide"]} bgColor="secondary">
@@ -154,8 +155,8 @@ class Presentation extends Component {
               <Appear><ListItem textColor="white">Powerful tool to construct GraphQL schema</ListItem></Appear>
               <Appear><ListItem textColor="white">Plugin based architecture</ListItem></Appear>
               <Appear><ListItem textColor="white">graphql-compose-mongoose builds types from Mongoose models</ListItem></Appear>
-              <Appear><ListItem textColor="white">Resulting schema automatically adds pagination, sorting and filtering.</ListItem></Appear>
-              <Appear><ListItem textColor="white">Mutations easy to do</ListItem></Appear>
+              <Appear><ListItem textColor="white">Easily builds Queries and Mutations</ListItem></Appear>
+              <Appear><ListItem textColor="white">Automatically adds pagination, sorting and filtering.</ListItem></Appear>
   					</List>
   				</Slide>
 
@@ -166,12 +167,13 @@ class Presentation extends Component {
             code={require("raw!../assets/code/graphqlCompose1.txt")}
             maxWidth="1300px"
             ranges={[
-              { loc: [0, 4], title: 'Create Model' },
-              { loc: [5, 6] },
-              { loc: [7, 11] },
-              { loc: [12, 17] },
-              { loc: [18, 19] },
-              { loc: [20, 23] },
+              { loc: [0, 3] },
+              { loc: [4, 8], title: 'Create Model' },
+              { loc: [9, 10] },
+              { loc: [11, 16] },
+              { loc: [17, 22] },
+              { loc: [23, 24] },
+              { loc: [25, 28] },
             ]}
           />
 
@@ -218,6 +220,7 @@ class Presentation extends Component {
 
           <Slide transition={["slide"]} bgColor="secondary">
   					<Heading size={3} textColor="primary" textFont="primary">api.maas.museum/graphql</Heading>
+            <Appear><Heading size={5} textColor="white" textFont="primary">Docs: api.maas.museum</Heading></Appear>
   				</Slide>
 
           {/*
@@ -226,7 +229,7 @@ class Presentation extends Component {
 
           <Slide transition={["slide"]} bgColor="white">
   					<Heading size={1} fit lineHeight={1} textColor="primary">Collection Website</Heading>
-            <Text lineHeight={1.5} textColor="secondary">https://collection.maas.museum</Text>
+            <Text lineHeight={1.5} textColor="secondary">collection.maas.museum</Text>
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="secondary">
@@ -269,7 +272,7 @@ class Presentation extends Component {
             <Heading size={5} textColor="white" textFont="primary">
               <Appear><p>server(url) => html</p></Appear>
               <Text textColor="primary">▼</Text>
-              <Appear><p>browser(html) => (dom, clientJS, css)</p></Appear>
+              <Appear><p>browser(html) => (dom, css, clientJS)</p></Appear>
               <Text textColor="primary">▼</Text>
               <Appear><p>clientJS(newUrl) => newDom</p></Appear>
             </Heading>
@@ -297,10 +300,10 @@ class Presentation extends Component {
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="secondary">
-  					<Heading size={2} textColor="primary" textFont="primary">Other JS Libraries</Heading>
+  					<Heading size={2} textColor="primary" textFont="primary">JS Libraries</Heading>
             <List>
               <Appear><ListItem textColor="white">Apollo</ListItem></Appear>
-              <Appear><ListItem textColor="white">Redux</ListItem></Appear>
+              <Appear><ListItem textColor="white">Redux (smart container/dumb component pattern)</ListItem></Appear>
               <Appear><ListItem textColor="white">React Router (v3)</ListItem></Appear>
               <Appear><ListItem textColor="white">Photoswipe</ListItem></Appear>
               <Appear><ListItem textColor="white">React Helmet</ListItem></Appear>
@@ -309,7 +312,7 @@ class Presentation extends Component {
   					</List>
   				</Slide>
 
-          {/* <CodeSlide
+          <CodeSlide
             transition={[]}
             lang="jsx"
             textSize={codeTextSize}
@@ -317,20 +320,22 @@ class Presentation extends Component {
             maxWidth="1300px"
             ranges={[
               { loc: [0, 1], title: 'Searchkit' },
-              { loc: [2, 4] },
+              { loc: [3, 4] },
               { loc: [6, 10] },
-              { loc: [12, 14] },
-              { loc: [15, 16], title: 'Re-use Keystone/Mongoose model' },
-              { loc: [17, 21] },
+              { loc: [14, 20] },
+              { loc: [20, 25]},
+              { loc: [29, 33] },
+              { loc: [33, 34] },
             ]}
-          /> */}
+          />
 
           <Slide transition={["slide"]} bgColor="secondary">
   					<Heading size={2} textColor="primary" textFont="primary">Styles</Heading>
             <List>
               <Appear><ListItem textColor="white">PostCSS</ListItem></Appear>
-              <Appear><ListItem textColor="white">postcss-scss</ListItem></Appear>
+              <Appear><ListItem textColor="white">SASS (postcss-scss)</ListItem></Appear>
               <Appear><ListItem textColor="white">Lost Grid Library</ListItem></Appear>
+              <Appear><ListItem textColor="white">EMs!</ListItem></Appear>
   					</List>
   				</Slide>
 
@@ -347,12 +352,11 @@ class Presentation extends Component {
   				</Slide>
 
           <Slide transition={["slide"]} bgColor="secondary" maxHeight="900px">
-  					<Heading size={4} textColor="primary" textFont="primary">What would we do differently?</Heading>
+  					<Heading size={4} textColor="primary" textFont="primary">What would we do differently next time?</Heading>
             <List>
-              <Appear><ListItem textColor="white">graph.cool</ListItem></Appear>
+              <Appear><ListItem textColor="white">graph.cool / scaphold.io</ListItem></Appear>
               <Appear><ListItem textColor="white">Relay</ListItem></Appear>
               <Appear><ListItem textColor="white">JS Decorators syntax?</ListItem></Appear>
-              <Appear><ListItem textColor="white">Handle .env better</ListItem></Appear>
               <Appear><ListItem textColor="white">Code splitting</ListItem></Appear>
               <Appear><ListItem textColor="white">CSS in JS</ListItem></Appear>
               <Appear><ListItem textColor="white">Use css-next syntax</ListItem></Appear>
@@ -360,9 +364,10 @@ class Presentation extends Component {
   					</List>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="secondary">
+          <Slide transition={["slide"]} bgColor="secondary" maxHeight="1000px">
   					<Heading size={4} textColor="primary" textFont="primary">Next.js</Heading>
             <List>
+              <Appear><ListItem textColor="white">Universal React library</ListItem></Appear>
               <Appear><ListItem textColor="white"><strike>react-router</strike></ListItem></Appear>
               <Appear><ListItem textColor="white"><strike>react-helmet</strike></ListItem></Appear>
               <Appear><ListItem textColor="white"><strike>webpack</strike></ListItem></Appear>
@@ -378,14 +383,18 @@ class Presentation extends Component {
   					<Heading size={3} textColor="white" textFont="primary">collection.maas.museum</Heading>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="primary" maxWidth="1200px">
-  					<Heading size={2} textColor="white" textFont="primary">Work at the Powerhouse</Heading>
-            <Text size={5} textColor="white" textFont="primary"><p>Senior Digital Developer job application ends this Friday</p></Text>
+          <Slide transition={["slide"]} bgColor="primary" maxWidth="1400px">
+  					<Heading size={2} textColor="white" textFont="primary">Work at the Powerhouse!</Heading>
+            <Appear>
+              <Text size={5} textColor="white" textFont="primary">
+                <p>Senior Digital Developer job application ends this Friday<br/>https://ma.as/devjob</p>
+              </Text>
+            </Appear>
   				</Slide>
 
-          {/* <Slide transition={["slide"]} bgColor="primary">
-  					<Heading size={2} textColor="white" textFont="primary">made with Spectacle</Heading>
-  				</Slide> */}
+          <Slide transition={["slide"]} bgColor="primary">
+  					<Heading size={5} textColor="white" textFont="primary">Made with Spectacle</Heading>
+  				</Slide>
 
           {/* END */}
 

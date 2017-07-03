@@ -1,6 +1,6 @@
 const searchkit = new SearchkitManager("https://api.maas.museum/search");
 
-const App = () => (
+const SearchPage = () => (
   <SearchkitProvider searchkit={searchkit}>
     <Layout>
       <TopBar>
@@ -12,22 +12,25 @@ const App = () => (
 
       <LayoutBody>
         <SideBar>
-          <HierarchicalMenuFilter
-            fields={["type.raw", "genres.raw"]}
-            title="Categories"
-            id="categories"
+          <RefinementListFilter
+            title="Terms"
+            field="terms.raw"
+            operator="AND"
+            size={5}
           />
           <RefinementListFilter
-            id="actors"
-            title="Actors"
-            field="actors.raw"
+            title="Places"
+            field="places.raw"
             operator="AND"
-            size={10}
+            size={5}
           />
         </SideBar>
+
         <LayoutResults>
-          <Hits mod="sk-hits-grid" hitsPerPage={10} itemComponent={MovieHitsGridItem}
-            sourceFilter={["title", "poster", "imdbId"]}/>
+          <Hits
+            hitsPerPage={20}
+            itemComponent={GridItem}
+          />
           <NoHits/>
         </LayoutResults>
       </LayoutBody>
