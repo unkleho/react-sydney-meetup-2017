@@ -38,6 +38,9 @@ require("../css/styles.css");
 const images = {
   collectionStack: require("../assets/collection-stack.gif"),
   memberships: require("../assets/memberships.png"),
+  head: require("../assets/head.jpg"),
+  enigma: require("../assets/enigma.jpg"),
+  pyrmont: require("../assets/pyrmont.jpg"),
 };
 
 preloader(images);
@@ -97,6 +100,18 @@ class Presentation extends Component {
               <Appear><ListItem>Went live in March 2017</ListItem></Appear>
   					</List>
   				</Slide>
+
+          <Slide transition={["fade"]} bgColor="white" maxWidth="1400px" maxHeight="1000px">
+            <Image src={images.enigma.replace("/", "")} width="50%" />
+          </Slide>
+
+          <Slide transition={["fade"]} bgColor="white" maxWidth="1400px" maxHeight="1000px">
+            <Image src={images.head.replace("/", "")} width="85%" />
+          </Slide>
+
+          <Slide transition={["fade"]} bgColor="white" maxWidth="1400px" maxHeight="1000px">
+            <Image src={images.pyrmont.replace("/", "")} width="90%" />
+          </Slide>
 
           <Slide transition={["slide"]} bgColor="white">
             <Heading size={2} lineHeight={1} textColor="primary">Goals</Heading>
@@ -383,14 +398,14 @@ class Presentation extends Component {
   					<Heading size={3} textColor="white" textFont="primary">collection.maas.museum</Heading>
   				</Slide>
 
-          <Slide transition={["slide"]} bgColor="primary" maxWidth="1400px">
+          {/* <Slide transition={["slide"]} bgColor="primary" maxWidth="1400px">
   					<Heading size={2} textColor="white" textFont="primary">Work at the Powerhouse!</Heading>
             <Appear>
               <Text size={5} textColor="white" textFont="primary">
                 <p>Senior Digital Developer job application ends this Friday<br/>https://ma.as/devjob</p>
               </Text>
             </Appear>
-  				</Slide>
+  				</Slide> */}
 
           <Slide transition={["slide"]} bgColor="primary">
   					<Heading size={5} textColor="white" textFont="primary">Made with Spectacle</Heading>
