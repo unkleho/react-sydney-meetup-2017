@@ -1,7 +1,7 @@
 ObjectTC.addFields({
   customField: {
     type: 'String',
-    resolve: (source, args, context, info) => 'some value',
+    resolve: (source, args, context, info) => 'some value or REST call',
   },
 });
 

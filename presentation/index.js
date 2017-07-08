@@ -151,7 +151,6 @@ class Presentation extends Component {
   						<Appear><ListItem textColor="white">MongoDB</ListItem></Appear>
   					</List>
   				</Slide>
-
           <Slide transition={["slide"]} bgColor="secondary">
   					<Heading size={2} textColor="primary" textFont="primary">Libraries</Heading>
   					<List>
