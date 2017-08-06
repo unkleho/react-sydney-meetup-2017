@@ -32,7 +32,7 @@ import Interactive from "../assets/interactive";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-require("../css/fonts.css");
+// require("../css/fonts.css");
 require("../css/styles.css");
 
 const images = {
@@ -50,8 +50,8 @@ const theme = createTheme({
   tertiary: "black",
   quartenary: "black"
 }, {
-  primary: "Circular-Medium",
-  secondary: "Circular-Medium",
+  primary: "Helvetica, Arial, sans-serif",
+  secondary: "Helvetica, Arial, sans-serif",
 });
 
 const codeTextSize = 30;

@@ -1,5 +1,5 @@
 body {
-	font-family: "Circular-Medium";
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 a:link, a:visited {
@@ -39,7 +39,7 @@ a:link, a:visited {
 }
 
 .axis {
-	font-family: Circular-Bold;
+	/*font-family: Circular-Bold;*/
 	font-size: 17px;
 }
 
