@@ -37,7 +37,6 @@ require("../css/styles.css");
 
 const images = {
   collectionStack: require("../assets/collection-stack.gif"),
-  memberships: require("../assets/memberships.png"),
   head: require("../assets/head.jpg"),
   enigma: require("../assets/enigma.jpg"),
   pyrmont: require("../assets/pyrmont.jpg"),
